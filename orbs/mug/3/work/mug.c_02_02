@@ -1,0 +1,63 @@
+
+
+
+
+
+
+
+
+int main(int argc, char *argv[])
+{
+
+
+    int x;
+
+
+
+printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+
+
+    {
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+int h(int i)
+{
+
+}
+
+
+
+
+
+
+
+

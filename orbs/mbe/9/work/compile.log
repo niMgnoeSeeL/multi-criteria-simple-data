@@ -1,0 +1,35 @@
+cc     mbe.c   -o mbe
+mbe.c: In function ‘main’:
+mbe.c:19:15: warning: implicit declaration of function ‘strtol’ [-Wimplicit-function-declaration]
+     j = (int) strtol(argv[1], NULL, 10);
+               ^
+mbe.c:22:12: warning: implicit declaration of function ‘p’ [-Wimplicit-function-declaration]
+     while (p(j))
+            ^
+mbe.c:32:9: error: expected expression before ‘}’ token
+         }
+         ^
+mbe.c: At top level:
+mbe.c:33:5: error: expected identifier or ‘(’ before ‘}’ token
+     }
+     ^
+mbe.c:35:8: error: expected declaration specifiers or ‘...’ before string constant
+ printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);
+        ^
+mbe.c:35:32: error: expected declaration specifiers or ‘...’ before numeric constant
+ printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);
+                                ^
+mbe.c:35:36: error: expected declaration specifiers or ‘...’ before numeric constant
+ printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);
+                                    ^
+mbe.c:35:40: error: expected declaration specifiers or ‘...’ before string constant
+ printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);
+                                        ^
+mbe.c:35:45: error: unknown type name ‘j’
+ printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);
+                                             ^
+mbe.c:37:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+<builtin>: recipe for target 'mbe' failed
+make: *** [mbe] Error 1

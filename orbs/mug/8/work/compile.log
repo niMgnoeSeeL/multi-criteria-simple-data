@@ -1,0 +1,11 @@
+mug.c: In function ‘main’:
+mug.c:14:9: warning: implicit declaration of function ‘atoi’ [-Wimplicit-function-declaration]
+     i = atoi(argv[1]);
+         ^
+mug.c:26:5: warning: implicit declaration of function ‘h’ [-Wimplicit-function-declaration]
+ i = h(i);
+     ^
+mug.c: At top level:
+mug.c:29:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^

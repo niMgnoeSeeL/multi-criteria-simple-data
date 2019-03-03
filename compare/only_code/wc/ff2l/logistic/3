@@ -1,0 +1,6 @@
+  int main(int argc, char *argv[])
++ characters = 0;
++ inword = 0;
++ words = 0;
++ int isletter(char c)
++ printf("%c ", c);

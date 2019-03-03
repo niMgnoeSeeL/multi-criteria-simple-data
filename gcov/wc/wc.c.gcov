@@ -1,0 +1,51 @@
+        -:    0:Source:wc.c
+        -:    0:Graph:wc.gcno
+        -:    0:Data:wc.gcda
+        -:    0:Runs:5
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:int isletter(char c);
+        5:    3:int main(int argc, char *argv[])
+        -:    4:{
+        -:    5:    int characters;
+        -:    6:    int lines;
+        -:    7:    int inword;
+        -:    8:    int words;
+        -:    9:    char c;
+        5:   10:    characters = 0;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+        5:   11:    inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+        5:   12:    words = 0;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+       43:   13:    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+        -:   14:    {
+       33:   15:        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);characters = characters + 1;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+       33:   16:        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        -:   17:        {
+        3:   18:            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);lines = lines + 1;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        -:   19:        }
+       33:   20:        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        -:   21:        {
+       20:   22:            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+        -:   23:            {
+        8:   24:                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);words = words + 1;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+        8:   25:                inword = 1;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+        -:   26:            }
+        -:   27:        }
+        -:   28:        else
+        -:   29:        {
+       13:   30:            inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        -:   31:        }
+       33:   32:    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+        -:   33:}
+       33:   34:int isletter(char c)
+        -:   35:{
+       33:   36:    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);printf("%c ", c); // slice here
+       33:   37:    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+       33:   38:        || ((c >= 'a') && (c <= 'z')))
+        -:   39:    {
+       20:   40:        return 1;
+        -:   41:    }
+        -:   42:    else
+        -:   43:    {
+       13:   44:        return 0;
+        -:   45:    }
+        -:   46:}

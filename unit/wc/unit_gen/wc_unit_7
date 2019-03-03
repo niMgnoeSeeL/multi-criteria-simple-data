@@ -1,0 +1,6 @@
+[16:56 - 19:10]
+if (c == '\n') {
+    printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);
+    lines = lines + 1;
+    printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+}

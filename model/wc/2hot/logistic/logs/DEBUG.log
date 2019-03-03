@@ -1,0 +1,949 @@
+2019-03-02 21:45:21,690 [I] output_path: output/model/wc/2hot/logistic	(at model.py:166) 
+2019-03-02 21:45:21,691 [D] self._size = 21	(at cstmt_factor_manager.py:79) 
+2019-03-02 21:45:21,691 [D] self._factor[0] = ('wc.c', [10:5 - 10:20])	(at cstmt_factor_manager.py:80) 
+2019-03-02 21:45:21,691 [D] self._compile_script = output/original/wc/scripts/compile.sh	(at response_manager.py:17) 
+2019-03-02 21:45:21,691 [D] self._test_suite[0] = output/original/wc/scripts/test/tc1.sh	(at response_manager.py:18) 
+2019-03-02 21:45:21,691 [I] factor_size: 21	(at model.py:121) 
+2019-03-02 21:45:21,691 [I] response_size: 19	(at model.py:122) 
+2019-03-02 21:45:21,714 [I] Criteria path loaded (path:output/original/wc/scripts/test/criteria)	(at model.py:43) 
+2019-03-02 21:45:21,717 [I] unique response cnt: 38	(at model.py:179) 
+2019-03-02 21:45:21,717 [I] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,717 [I] 1 1 1 1 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 21:45:21,717 [I] 1 1 1 1 1 1 1 1 1 0 0 1 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 21:45:21,717 [I] 1 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 21:45:21,717 [I] 1 1 0 1 0 1 0 0 1 1 1 1 1 0 0 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,717 [I] 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,717 [I] 1 1 1 1 1 1 1 1 1 0 0 1 1 0 0 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,717 [I] 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 1 1	(at model.py:181) 
+2019-03-02 21:45:21,717 [I] 1 1 1 1 1 1 0 0 1 0 0 1 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 21:45:21,717 [I] 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 21:45:21,717 [I] 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 0 1 1 1 1 1 1 1 0 0 0 0 0 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 0 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 0 1 1 1 0 0 1 1 1 1 0 0 0 0 0 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 0 1 1 1 1 1 0 0 1 0 0 0 0 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 0 1 1 1 1 1 1 1 1 0 0 0 0 0 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 0 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 1 1 0 0 1 0 0 1 0 0 0 0 0 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 0 1 1 1 0 0 1 1 1 1 0 0 0 0 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 1 1 1 1 1 0 0 1 0 0 0 0 0 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 0 1 1 1 1 1 1 1 0 0 0 0 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 1 1 0 0 1 0 0 1 0 0 0 0 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 1 1 0 0 1 0 0 1 1 0 0 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 1 1 1 1 1 0 0 1 0 0 0 0 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 0 0 1 1 0 0 1 1 1 1 0 0 0 0 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 0 1 0 0 1 0 0 1 1 0 0 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 0 1 1 1 1 0 0 1 1 0 0 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 0 1 1 1 0 0 1 1 1 1 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 0 1 1 1 0 0 1 1 1 1 1 0 0 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 0 0 1 1 1 1 1 1 1 0 0 0 0 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 0 1 1 1 1 1 1 1 1 0 0 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 0 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 21:45:21,718 [I] 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 21:45:21,719 [I] 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 21:45:21,719 [I] Criterion ORBS:10:5:characters (1): response_idx:2, vector_idx:23	(at model.py:135) 
+2019-03-02 21:45:21,752 [I] inferred factor:
+[0 1 1 0 0 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1]	(at model.py:145) 
+2019-03-02 21:45:21,764 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+    characters = 0;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+              ;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+             ;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);                           ;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);;
+
+
+         
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            ;
+
+
+             
+        }
+        else
+        ;
+
+         
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);;
+
+
+
+
+
+
+
+     
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:21,932 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:21,933 [I] response:
+[1 1 1 0 0 1 0 0 1 0 0 1 0 0 0 0 0 1 1]	(at model.py:151) 
+2019-03-02 21:45:21,933 [I] Criterion ORBS:11:5:inword (2): response_idx:3, vector_idx:24	(at model.py:135) 
+2019-03-02 21:45:21,936 [I] inferred factor:
+[1 0 1 1 0 1 0 0 1 0 0 0 1 1 1 1 1 1 1 1 1]	(at model.py:145) 
+2019-03-02 21:45:21,937 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+                  ;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+    inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+             ;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);;
+
+
+
+
+
+
+
+     
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:22,098 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:22,099 [I] response:
+[1 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]	(at model.py:151) 
+2019-03-02 21:45:22,099 [I] Criterion ORBS:12:5:words (3): response_idx:4, vector_idx:25	(at model.py:135) 
+2019-03-02 21:45:22,102 [I] inferred factor:
+[1 1 0 1 0 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1]	(at model.py:145) 
+2019-03-02 21:45:22,104 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+                  ;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+              ;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+    words = 0;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);;
+
+
+
+
+
+
+
+     
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:22,258 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:22,258 [I] response:
+[1 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]	(at model.py:151) 
+2019-03-02 21:45:22,258 [I] Criterion ORBS:13:25:c (4): response_idx:5, vector_idx:26	(at model.py:135) 
+2019-03-02 21:45:22,263 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]	(at model.py:145) 
+2019-03-02 21:45:22,265 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+    characters = 0;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+    inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+    words = 0;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);characters = characters + 1;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);lines = lines + 1;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);words = words + 1;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                inword = 1;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        {
+            inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);printf("%c ", c); // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:22,408 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:22,409 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:151) 
+2019-03-02 21:45:22,409 [I] Criterion ORBS:15:22:characters (5): response_idx:6, vector_idx:27	(at model.py:135) 
+2019-03-02 21:45:22,414 [I] inferred factor:
+[0 1 1 0 0 0 0 1 1 0 0 0 0 1 1 0 1 1 0 1 1]	(at model.py:145) 
+2019-03-02 21:45:22,496 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+    characters = 0;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+              ;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+             ;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);characters = characters + 1;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        ;
+
+         
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);                 ;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                          ;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        {
+                      ;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+                ;
+    }
+    else
+    {
+                ;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:22,674 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:22,675 [I] response:
+[1 1 1 0 0 1 1 1 1 0 0 1 0 0 0 0 0 1 1]	(at model.py:151) 
+2019-03-02 21:45:22,675 [I] Criterion ORBS:15:9:characters (6): response_idx:7, vector_idx:28	(at model.py:135) 
+2019-03-02 21:45:22,680 [I] inferred factor:
+[0 1 1 0 0 0 0 1 1 0 0 0 0 1 1 0 1 1 0 1 1]	(at model.py:145) 
+2019-03-02 21:45:22,682 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+    characters = 0;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+              ;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+             ;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);characters = characters + 1;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        ;
+
+         
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);                 ;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                          ;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        {
+                      ;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+                ;
+    }
+    else
+    {
+                ;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:22,836 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:22,836 [I] response:
+[1 1 1 0 0 1 1 1 1 0 0 1 0 0 0 0 0 1 1]	(at model.py:151) 
+2019-03-02 21:45:22,837 [I] Criterion ORBS:16:13:c (7): response_idx:8, vector_idx:29	(at model.py:135) 
+2019-03-02 21:45:22,839 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]	(at model.py:145) 
+2019-03-02 21:45:22,840 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+    characters = 0;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+    inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+    words = 0;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);characters = characters + 1;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);lines = lines + 1;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);words = words + 1;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                inword = 1;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        {
+            inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);printf("%c ", c); // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:23,004 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:23,004 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:151) 
+2019-03-02 21:45:23,004 [I] Criterion ORBS:18:21:lines (8): response_idx:9, vector_idx:30	(at model.py:135) 
+2019-03-02 21:45:23,008 [I] inferred factor:
+[1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 1 1]	(at model.py:145) 
+2019-03-02 21:45:23,010 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+                  ;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+              ;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+             ;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);characters = characters + 1;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);lines = lines + 1;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);                 ;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                          ;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        ;
+
+         
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+                ;
+    }
+    else
+    {
+                ;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:23,185 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:23,186 [I] response:
+[1 1 0 0 0 1 0 0 1 1 1 1 0 0 0 0 0 1 1]	(at model.py:151) 
+2019-03-02 21:45:23,186 [I] Criterion ORBS:18:13:lines (9): response_idx:10, vector_idx:31	(at model.py:135) 
+2019-03-02 21:45:23,189 [I] inferred factor:
+[1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 1 1]	(at model.py:145) 
+2019-03-02 21:45:23,191 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+                  ;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+              ;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+             ;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);characters = characters + 1;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);lines = lines + 1;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);                 ;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                          ;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        ;
+
+         
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+                ;
+    }
+    else
+    {
+                ;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:23,385 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:23,386 [I] response:
+[1 1 0 0 0 1 0 0 1 1 1 1 0 0 0 0 0 1 1]	(at model.py:151) 
+2019-03-02 21:45:23,386 [I] Criterion ORBS:20:22:c (10): response_idx:11, vector_idx:32	(at model.py:135) 
+2019-03-02 21:45:23,389 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]	(at model.py:145) 
+2019-03-02 21:45:23,390 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+    characters = 0;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+    inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+    words = 0;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);characters = characters + 1;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);lines = lines + 1;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);words = words + 1;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                inword = 1;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        {
+            inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);printf("%c ", c); // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:23,563 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:23,563 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:151) 
+2019-03-02 21:45:23,563 [I] Criterion ORBS:22:17:inword (11): response_idx:12, vector_idx:33	(at model.py:135) 
+2019-03-02 21:45:23,568 [I] inferred factor:
+[1 0 1 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 0]	(at model.py:145) 
+2019-03-02 21:45:23,569 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+                  ;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+    inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+             ;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);                           ;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);                 ;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);                 ;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                inword = 1;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        {
+            inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+                ;
+    }
+    else
+    {
+        return 0;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:23,724 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:23,724 [I] response:
+[1 1 1 1 0 1 0 0 1 0 0 1 1 0 0 1 1 1 1]	(at model.py:151) 
+2019-03-02 21:45:23,724 [I] Criterion ORBS:24:25:words (12): response_idx:13, vector_idx:34	(at model.py:135) 
+2019-03-02 21:45:23,727 [I] inferred factor:
+[1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0]	(at model.py:145) 
+2019-03-02 21:45:23,729 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+                  ;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+    inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+    words = 0;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);                           ;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);                 ;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);words = words + 1;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                inword = 1;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        {
+            inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+                ;
+    }
+    else
+    {
+        return 0;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:23,889 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:23,890 [I] response:
+[1 1 0 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 1]	(at model.py:151) 
+2019-03-02 21:45:23,890 [I] Criterion ORBS:24:17:words (13): response_idx:14, vector_idx:35	(at model.py:135) 
+2019-03-02 21:45:23,893 [I] inferred factor:
+[1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0]	(at model.py:145) 
+2019-03-02 21:45:23,894 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+                  ;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+    inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+    words = 0;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);                           ;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);                 ;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);words = words + 1;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                inword = 1;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        {
+            inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+                ;
+    }
+    else
+    {
+        return 0;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:24,050 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:24,051 [I] response:
+[1 1 0 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 1]	(at model.py:151) 
+2019-03-02 21:45:24,051 [I] Criterion ORBS:25:17:inword (14): response_idx:15, vector_idx:36	(at model.py:135) 
+2019-03-02 21:45:24,054 [I] inferred factor:
+[1 0 1 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 0]	(at model.py:145) 
+2019-03-02 21:45:24,055 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+                  ;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+    inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+             ;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);                           ;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);                 ;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);                 ;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                inword = 1;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        {
+            inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+                ;
+    }
+    else
+    {
+        return 0;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:24,205 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:24,206 [I] response:
+[1 1 1 1 0 1 0 0 1 0 0 1 1 0 0 1 1 1 1]	(at model.py:151) 
+2019-03-02 21:45:24,206 [I] Criterion ORBS:30:13:inword (15): response_idx:16, vector_idx:37	(at model.py:135) 
+2019-03-02 21:45:24,209 [I] inferred factor:
+[1 1 1 0 0 1 0 1 1 0 0 0 1 1 1 0 0 1 0 0 0]	(at model.py:145) 
+2019-03-02 21:45:24,210 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+                  ;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+              ;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+             ;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);                           ;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        ;
+
+         
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            ;
+
+
+             
+        }
+        else
+        {
+            inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);                ; // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:24,370 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:24,371 [I] response:
+[1 1 0 1 0 1 0 0 1 0 0 1 0 0 0 0 1 1 1]	(at model.py:151) 
+2019-03-02 21:45:24,371 [I] Criterion ORBS:36:19:c (16): response_idx:17, vector_idx:38	(at model.py:135) 
+2019-03-02 21:45:24,374 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]	(at model.py:145) 
+2019-03-02 21:45:24,374 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+    characters = 0;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+    inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+    words = 0;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);characters = characters + 1;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);lines = lines + 1;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);words = words + 1;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                inword = 1;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        {
+            inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);printf("%c ", c); // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:24,526 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:24,526 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:151) 
+2019-03-02 21:45:24,527 [I] Criterion ORBS:37:11:c (17): response_idx:18, vector_idx:39	(at model.py:135) 
+2019-03-02 21:45:24,531 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]	(at model.py:145) 
+2019-03-02 21:45:24,531 [D] Filename:wc.c Code:
+#include <stdio.h>
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+    int lines;
+    int inword;
+    int words;
+    char c;
+    characters = 0;printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters);
+    inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword);
+    words = 0;printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words);
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);characters = characters + 1;printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);if (c == '\n')
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);lines = lines + 1;printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);if (isletter(c))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);if (inword == 0)
+            {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);words = words + 1;printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                inword = 1;printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        }
+        else
+        {
+            inword = 0;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);}
+}
+int isletter(char c)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c);printf("%c ", c); // slice here
+    printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 21:45:24,680 [I] succ: True	(at model.py:150) 
+2019-03-02 21:45:24,680 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:151) 
+2019-03-02 21:45:24,680 [I] success rate: 1.0	(at model.py:190) 

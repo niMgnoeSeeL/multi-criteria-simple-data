@@ -1,0 +1,42 @@
+Mutant Filename,Mutation Operator,Line#,Before Mutation,,,,,After Mutation
+,,,Start Line#,Start Col#,End Line#,End Col#,Target Token,Start Line#,Start Col#,End Line#,End Col#,Mutated Token
+mug.MUT1.c,SSDL,454,14,5,14,23,i = atoi(argv[1]),14,5,14,6,;
+mug.MUT2.c,SSDL,454,14,23,14,69,printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i),14,23,14,24,;
+mug.MUT3.c,SSDL,454,15,5,15,23,c = atoi(argv[2]),15,5,15,6,;
+mug.MUT4.c,SSDL,454,15,23,15,69,printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c),15,23,15,24,;
+mug.MUT5.c,SSDL,454,16,5,16,23,x = atoi(argv[3]),16,5,16,6,;
+mug.MUT6.c,SSDL,454,16,23,16,69,printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x),16,23,16,24,;
+mug.MUT7.c,SSDL,454,17,5,17,52,printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i),17,5,17,6,;
+mug.MUT8.c,SSDL,454,26,5,26,52,printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x),26,5,26,6,;
+mug.MUT9.c,SSDL,454,26,52,26,70,printf("%d\n", x),26,52,26,53,;
+mug.MUT10.c,SSDL,454,30,5,30,51,printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i),30,5,30,6,;
+mug.MUT11.c,SSDL,454,30,51,37,6,if (i > 0) {
+} else {
+}
+,30,51,30,52,;
+
+
+
+
+
+
+
+mug.MUT12.c,SSDL,454,41,5,41,51,printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i),41,5,41,6,;
+mug.MUT13.c,SSDL,454,41,51,48,6,if (i < 0) {
+} else {
+}
+,41,51,41,52,;
+
+
+
+
+
+
+
+mug.MUT14.c,SSDL,454,52,5,52,52,printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i),52,5,52,6,;
+mug.MUT15.c,SSDL,454,52,52,52,65,return i - 1;
+,52,52,52,53,;
+mug.MUT16.c,SSDL,454,56,5,56,17,return -100;
+,56,5,56,6,;
+mug.MUT17.c,SSDL,454,60,5,60,16,return 100;
+,60,5,60,6,;

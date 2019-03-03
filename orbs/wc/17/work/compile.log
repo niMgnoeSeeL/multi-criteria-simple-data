@@ -1,0 +1,9 @@
+wc.c:33:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+wc.c: In function ‘isletter’:
+wc.c:38:1: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+ printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c);
+ ^
+wc.c:38:1: warning: incompatible implicit declaration of built-in function ‘printf’
+wc.c:38:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’

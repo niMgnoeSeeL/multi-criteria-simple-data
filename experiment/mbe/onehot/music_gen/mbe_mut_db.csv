@@ -1,0 +1,156 @@
+Mutant Filename,Mutation Operator,Line#,Before Mutation,,,,,After Mutation
+,,,Start Line#,Start Col#,End Line#,End Col#,Target Token,Start Line#,Start Col#,End Line#,End Col#,Mutated Token
+mbe.MUT1.c,SSDL,454,19,5,19,41,j = (int)strtol(argv[1], ((void *)0), 10),19,5,19,6,;
+mbe.MUT2.c,SSDL,454,20,5,20,41,k = (int)strtol(argv[2], ((void *)0), 10),20,5,20,6,;
+mbe.MUT3.c,SSDL,454,22,5,22,52,printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j),22,5,22,6,;
+mbe.MUT4.c,SSDL,454,22,52,33,53,while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);
+        if (q(k)) {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);
+            k = f1(k);
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        } else {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);
+            k = f2(k);
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);
+            j = f3(j);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);
+    }
+,22,52,22,53,;
+
+
+
+
+
+
+
+
+
+
+
+mbe.MUT5.c,SSDL,454,23,5,33,53,{
+    printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);
+    if (q(k)) {
+        printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);
+        k = f1(k);
+        printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+    } else {
+        printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);
+        k = f2(k);
+        printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+        printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);
+        j = f3(j);
+        printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+    }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);
+}
+,23,5,23,6,{
+
+
+
+
+
+
+
+
+
+}
+mbe.MUT6.c,SSDL,454,24,9,24,56,printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k),24,9,24,10,;
+mbe.MUT7.c,SSDL,454,24,56,32,10,if (q(k)) {
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);
+    k = f1(k);
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+} else {
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);
+    k = f2(k);
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+    printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);
+    j = f3(j);
+    printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+}
+,24,56,24,57,;
+
+
+
+
+
+
+
+
+mbe.MUT8.c,SSDL,454,25,9,27,10,{
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);
+    k = f1(k);
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+}
+,25,9,25,10,{
+
+}
+mbe.MUT9.c,SSDL,454,26,13,26,60,printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k),26,13,26,14,;
+mbe.MUT10.c,SSDL,454,26,60,26,70,k = f1(k),26,60,26,61,;
+mbe.MUT11.c,SSDL,454,26,70,26,117,printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k),26,70,26,71,;
+mbe.MUT12.c,SSDL,454,29,9,32,10,{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);
+    k = f2(k);
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+    printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);
+    j = f3(j);
+    printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+}
+,29,9,29,10,{
+
+
+}
+mbe.MUT13.c,SSDL,454,30,13,30,60,printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k),30,13,30,14,;
+mbe.MUT14.c,SSDL,454,30,60,30,70,k = f2(k),30,60,30,61,;
+mbe.MUT15.c,SSDL,454,30,70,30,117,printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k),30,70,30,71,;
+mbe.MUT16.c,SSDL,454,31,13,31,60,printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j),31,13,31,14,;
+mbe.MUT17.c,SSDL,454,31,60,31,70,j = f3(j),31,60,31,61,;
+mbe.MUT18.c,SSDL,454,31,70,31,117,printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j),31,70,31,71,;
+mbe.MUT19.c,SSDL,454,33,5,33,52,printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j),33,5,33,6,;
+mbe.MUT20.c,SSDL,454,34,5,34,52,printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j),34,5,34,6,;
+mbe.MUT21.c,SSDL,454,34,52,34,70,printf("%d\n", j),34,52,34,53,;
+mbe.MUT22.c,SSDL,454,39,5,39,51,printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j),39,5,39,6,;
+mbe.MUT23.c,SSDL,454,39,51,46,6,if (j > 0) {
+    return 1;
+} else {
+    return 0;
+}
+,39,51,39,52,;
+
+
+
+
+
+
+
+mbe.MUT24.c,SSDL,454,41,9,41,18,return 1;
+,41,9,41,10,;
+mbe.MUT25.c,SSDL,454,45,9,45,18,return 0;
+,45,9,45,10,;
+mbe.MUT26.c,SSDL,454,51,5,51,51,printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k),51,5,51,6,;
+mbe.MUT27.c,SSDL,454,51,51,54,6,if (k < 0) {
+    return 1;
+}
+,51,51,51,52,;
+
+
+
+mbe.MUT28.c,SSDL,454,53,9,53,18,return 1;
+,53,9,53,10,;
+mbe.MUT29.c,SSDL,454,56,5,56,14,return 0;
+,56,5,56,6,;
+mbe.MUT30.c,SSDL,454,61,5,61,52,printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k),61,5,61,6,;
+mbe.MUT31.c,SSDL,454,61,52,61,66,return k + 10;
+,61,52,61,53,;
+mbe.MUT32.c,SSDL,454,66,5,66,52,printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k),66,5,66,6,;
+mbe.MUT33.c,SSDL,454,66,52,66,65,return k - 2;
+,66,52,66,53,;
+mbe.MUT34.c,SSDL,454,71,5,71,52,printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j),71,5,71,6,;
+mbe.MUT35.c,SSDL,454,71,52,71,66,return j - 15;
+,71,52,71,53,;
+mbe.MUT36.c,SSDL,454,76,5,76,14,return 1;
+,76,5,76,6,;

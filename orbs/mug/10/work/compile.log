@@ -1,0 +1,17 @@
+mug.c: In function ‘main’:
+mug.c:15:9: warning: implicit declaration of function ‘atoi’ [-Wimplicit-function-declaration]
+     c = atoi(argv[2]);
+         ^
+mug.c:21:17: warning: implicit declaration of function ‘f’ [-Wimplicit-function-declaration]
+             x = f();
+                 ^
+mug.c:27:1: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+ printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);
+ ^
+mug.c:27:1: warning: incompatible implicit declaration of built-in function ‘printf’
+mug.c:27:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+mug.c: In function ‘q’:
+mug.c:59:1: error: expected declaration or statement at end of input
+ }
+ ^
+mug.c:59:1: error: expected declaration or statement at end of input

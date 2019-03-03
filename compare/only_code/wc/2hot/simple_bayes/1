@@ -1,0 +1,4 @@
+  int main(int argc, char *argv[])
++ characters = 0;
++ while (scanf("%c", &c) == 1)
++ int isletter(char c)

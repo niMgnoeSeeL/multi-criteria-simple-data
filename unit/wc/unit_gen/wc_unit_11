@@ -1,0 +1,11 @@
+[21:9 - 27:10]
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);
+    if (inword == 0) {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);
+        words = words + 1;
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+        inword = 1;
+        printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+    }
+}

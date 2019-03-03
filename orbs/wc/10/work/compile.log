@@ -1,0 +1,9 @@
+wc.c: In function ‘main’:
+wc.c:13:12: warning: implicit declaration of function ‘scanf’ [-Wimplicit-function-declaration]
+     while (scanf("%c", &c) == 1)
+            ^
+wc.c:13:12: warning: incompatible implicit declaration of built-in function ‘scanf’
+wc.c:13:12: note: include ‘<stdio.h>’ or provide a declaration of ‘scanf’
+wc.c:48:1: error: expected expression before ‘}’ token
+ }
+ ^

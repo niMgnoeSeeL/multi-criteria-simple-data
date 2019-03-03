@@ -1,0 +1,82 @@
+        -:    0:Source:mbe.c
+        -:    0:Graph:mbe.gcno
+        -:    0:Data:mbe.gcda
+        -:    0:Runs:4
+        -:    0:Programs:1
+        -:    1:/* This file is part of the ORBS distribution.
+        -:    2: * See the file LICENSE.TXT for more information. 
+        -:    3: */
+        -:    4:#include <stdio.h>
+        -:    5:#include <stdlib.h>
+        -:    6:
+        -:    7:int p(int j);
+        -:    8:int q(int k);
+        -:    9:
+        -:   10:int f1(int k);
+        -:   11:int f2(int k);
+        -:   12:int f3(int j);
+        -:   13:
+        4:   14:int main(int argc, char *argv[])
+        -:   15:{
+        -:   16:    int j;
+        -:   17:    int k;
+        -:   18:
+        4:   19:    j = (int) strtol(argv[1], NULL, 10);
+        4:   20:    k = (int) strtol(argv[2], NULL, 10);
+        -:   21:
+       18:   22:    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+        -:   23:    {
+       10:   24:        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        -:   25:        {
+        5:   26:            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        -:   27:        }
+        -:   28:        else
+        -:   29:        {
+        5:   30:            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+        5:   31:            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        -:   32:        }
+       10:   33:    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+        4:   34:    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);printf("%d\n", j);
+        -:   35:}
+        -:   36:
+       14:   37:int p(int j)
+        -:   38:{
+       14:   39:    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+        -:   40:    {
+       10:   41:        return 1;
+        -:   42:    }
+        -:   43:    else
+        -:   44:    {
+        4:   45:        return 0;
+        -:   46:    }
+        -:   47:}
+        -:   48:
+       10:   49:int q(int k)
+        -:   50:{
+       10:   51:    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+        -:   52:    {
+        5:   53:        return 1;
+        -:   54:    }
+        -:   55:
+        5:   56:    return 0;
+        -:   57:}
+        -:   58:
+        5:   59:int f1(int k)
+        -:   60:{
+        5:   61:    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+        -:   62:}
+        -:   63:
+        5:   64:int f2(int k)
+        -:   65:{
+        5:   66:    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+        -:   67:}
+        -:   68:
+        5:   69:int f3(int j)
+        -:   70:{
+        5:   71:    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+        -:   72:}
+        -:   73:
+    #####:   74:int x(int y)
+        -:   75:{
+    #####:   76:    return 1;
+        -:   77:}

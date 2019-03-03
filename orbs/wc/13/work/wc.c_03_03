@@ -1,0 +1,48 @@
+
+int isletter(char c);
+int main(int argc, char *argv[])
+{
+    int characters;
+
+    int inword;
+    int words;
+    char c;
+    characters = 0;
+
+    words = 0;
+    while (scanf("%c", &c) == 1)
+    {
+
+
+
+
+
+        if (isletter(c))
+        {
+            if (inword == 0)
+            {
+                words = words + 1;
+printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+
+                inword = 1;
+            }
+        }
+        else
+        {
+            inword = 0;
+        }
+    }
+}
+int isletter(char c)
+{
+
+    if (((c >= 'A') && (c <= 'Z'))
+        || ((c >= 'a') && (c <= 'z')))
+    {
+        return 1;
+    }
+
+    {
+        return 0;
+    }
+}

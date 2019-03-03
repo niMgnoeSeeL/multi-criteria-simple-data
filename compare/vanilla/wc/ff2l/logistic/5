@@ -1,0 +1,32 @@
++ #include <stdio.h>
++ int isletter(char c);
+  int main(int argc, char *argv[])
+  {
+  int characters;
++ int lines;
++ int inword;
++ int words;
+  char c;
+  characters = 0;
++ inword = 0;
+  while (scanf("%c", &c) == 1)
+  {
+  characters = characters + 1;
++ if (isletter(c))
++ else
++ {
++ inword = 0;
+  }
+  }
++ }
++ int isletter(char c)
++ {
++ printf("%c ", c);
++ if (((c >= 'A') && (c <= 'Z'))
++ || ((c >= 'a') && (c <= 'z')))
++ {
++ }
++ else
++ {
++ }
++ }

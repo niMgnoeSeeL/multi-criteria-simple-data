@@ -1,0 +1,10 @@
+  int main(int argc, char *argv[])
+- inword = 0;
+- words = 0;
+  while (scanf("%c", &c) == 1)
++ characters = characters + 1;
+  if (c == '\n')
+  lines = lines + 1;
++ if (isletter(c))
+  }
++ int isletter(char c)

@@ -1,0 +1,12 @@
+  int main(int argc, char *argv[])
++ while (p(i))
++ if (q(c))
++ x = f();
++ c = g();
++ i = h(i);
++ }
++ bool p(int i)
++ bool q(int i)
++ int h(int i)
++ int f()
++ int g()

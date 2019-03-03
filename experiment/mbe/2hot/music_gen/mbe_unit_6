@@ -1,0 +1,6 @@
+[25:9 - 27:10]
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);
+    k = f1(k);
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+}

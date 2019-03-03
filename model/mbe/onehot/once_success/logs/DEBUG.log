@@ -1,0 +1,2408 @@
+2019-01-29 05:51:59,721 [I] output_path: output/model/mbe/onehot/once_success	(at model.py:159) 
+2019-01-29 05:51:59,721 [I] output_path: output/model/mbe/onehot/once_success	(at model.py:159) 
+2019-01-29 05:51:59,722 [D] self._size = 21	(at cstmt_factor_manager.py:63) 
+2019-01-29 05:51:59,722 [D] self._size = 21	(at cstmt_factor_manager.py:63) 
+2019-01-29 05:51:59,722 [D] self._factor[0] = ('mbe.c', [19:5 - 19:41])	(at cstmt_factor_manager.py:64) 
+2019-01-29 05:51:59,722 [D] self._factor[0] = ('mbe.c', [19:5 - 19:41])	(at cstmt_factor_manager.py:64) 
+2019-01-29 05:51:59,723 [D] self._compile_script = output/original/mbe/scripts/compile.sh	(at response_manager.py:17) 
+2019-01-29 05:51:59,723 [D] self._compile_script = output/original/mbe/scripts/compile.sh	(at response_manager.py:17) 
+2019-01-29 05:51:59,723 [D] self._test_suite[0] = output/original/mbe/scripts/test/tc1.sh	(at response_manager.py:18) 
+2019-01-29 05:51:59,723 [D] self._test_suite[0] = output/original/mbe/scripts/test/tc1.sh	(at response_manager.py:18) 
+2019-01-29 05:51:59,741 [I] factor_size: 21	(at model.py:113) 
+2019-01-29 05:51:59,741 [I] factor_size: 21	(at model.py:113) 
+2019-01-29 05:51:59,742 [I] response_size: 16	(at model.py:114) 
+2019-01-29 05:51:59,742 [I] response_size: 16	(at model.py:114) 
+2019-01-29 05:51:59,758 [I] Criteria path loaded (path:output/original/mbe/scripts/test/criteria)	(at model.py:43) 
+2019-01-29 05:51:59,758 [I] Criteria path loaded (path:output/original/mbe/scripts/test/criteria)	(at model.py:43) 
+2019-01-29 05:51:59,782 [I] unique response cnt: 4	(at model.py:172) 
+2019-01-29 05:51:59,782 [I] unique response cnt: 4	(at model.py:172) 
+2019-01-29 05:51:59,782 [I] 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1	(at model.py:174) 
+2019-01-29 05:51:59,782 [I] 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1	(at model.py:174) 
+2019-01-29 05:51:59,782 [I] 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0	(at model.py:174) 
+2019-01-29 05:51:59,782 [I] 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0	(at model.py:174) 
+2019-01-29 05:51:59,783 [I] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1	(at model.py:174) 
+2019-01-29 05:51:59,783 [I] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1	(at model.py:174) 
+2019-01-29 05:51:59,783 [I] 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0	(at model.py:174) 
+2019-01-29 05:51:59,783 [I] 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0	(at model.py:174) 
+2019-01-29 05:51:59,783 [I] Criterion ORBS:22:14:j (1): response_idx:2, vector_idx:23	(at model.py:127) 
+2019-01-29 05:51:59,783 [I] Criterion ORBS:22:14:j (1): response_idx:2, vector_idx:23	(at model.py:127) 
+2019-01-29 05:51:59,784 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:51:59,784 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:51:59,809 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:51:59,809 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,010 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,010 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,010 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,010 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,010 [I] Criterion ORBS:24:15:k (2): response_idx:3, vector_idx:24	(at model.py:127) 
+2019-01-29 05:52:00,010 [I] Criterion ORBS:24:15:k (2): response_idx:3, vector_idx:24	(at model.py:127) 
+2019-01-29 05:52:00,010 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,010 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,012 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,012 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,115 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,115 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,116 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,116 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,116 [I] Criterion ORBS:26:20:k (3): response_idx:4, vector_idx:25	(at model.py:127) 
+2019-01-29 05:52:00,116 [I] Criterion ORBS:26:20:k (3): response_idx:4, vector_idx:25	(at model.py:127) 
+2019-01-29 05:52:00,116 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,116 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,118 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,118 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,220 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,220 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,220 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,220 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,220 [I] Criterion ORBS:26:13:k (4): response_idx:5, vector_idx:26	(at model.py:127) 
+2019-01-29 05:52:00,220 [I] Criterion ORBS:26:13:k (4): response_idx:5, vector_idx:26	(at model.py:127) 
+2019-01-29 05:52:00,220 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,220 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,222 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,222 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,328 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,328 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,329 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,329 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,329 [I] Criterion ORBS:30:20:k (5): response_idx:6, vector_idx:27	(at model.py:127) 
+2019-01-29 05:52:00,329 [I] Criterion ORBS:30:20:k (5): response_idx:6, vector_idx:27	(at model.py:127) 
+2019-01-29 05:52:00,329 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,329 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,331 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,331 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,439 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,439 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,439 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,439 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,439 [I] Criterion ORBS:30:13:k (6): response_idx:7, vector_idx:28	(at model.py:127) 
+2019-01-29 05:52:00,439 [I] Criterion ORBS:30:13:k (6): response_idx:7, vector_idx:28	(at model.py:127) 
+2019-01-29 05:52:00,439 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,439 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,441 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,441 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,566 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,566 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,567 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,567 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:00,567 [I] Criterion ORBS:31:20:j (7): response_idx:8, vector_idx:29	(at model.py:127) 
+2019-01-29 05:52:00,567 [I] Criterion ORBS:31:20:j (7): response_idx:8, vector_idx:29	(at model.py:127) 
+2019-01-29 05:52:00,567 [I] inferred factor:
+[0 1 0 0 0 0 0 0 1 0 1 0 1 0 1 1 0 1 1 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,567 [I] inferred factor:
+[0 1 0 0 0 0 0 0 1 0 1 0 1 0 1 1 0 1 1 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,572 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    ;
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);;
+
+
+
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,572 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    ;
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);;
+
+
+
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,726 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,726 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,727 [I] response:
+[1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1]	(at model.py:143) 
+2019-01-29 05:52:00,727 [I] response:
+[1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1]	(at model.py:143) 
+2019-01-29 05:52:00,727 [I] Criterion ORBS:31:13:j (8): response_idx:9, vector_idx:30	(at model.py:127) 
+2019-01-29 05:52:00,727 [I] Criterion ORBS:31:13:j (8): response_idx:9, vector_idx:30	(at model.py:127) 
+2019-01-29 05:52:00,727 [I] inferred factor:
+[0 1 0 0 0 0 0 0 1 0 1 0 1 0 1 1 0 1 1 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,727 [I] inferred factor:
+[0 1 0 0 0 0 0 0 1 0 1 0 1 0 1 1 0 1 1 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,731 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    ;
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);;
+
+
+
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,731 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    ;
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);;
+
+
+
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,879 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,879 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:00,880 [I] response:
+[1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1]	(at model.py:143) 
+2019-01-29 05:52:00,880 [I] response:
+[1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1]	(at model.py:143) 
+2019-01-29 05:52:00,880 [I] Criterion ORBS:34:20:j (9): response_idx:10, vector_idx:31	(at model.py:127) 
+2019-01-29 05:52:00,880 [I] Criterion ORBS:34:20:j (9): response_idx:10, vector_idx:31	(at model.py:127) 
+2019-01-29 05:52:00,880 [I] inferred factor:
+[0 1 0 0 0 0 0 0 1 0 1 0 1 0 1 1 0 1 1 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,880 [I] inferred factor:
+[0 1 0 0 0 0 0 0 1 0 1 0 1 0 1 1 0 1 1 0 1]	(at model.py:137) 
+2019-01-29 05:52:00,884 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    ;
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);;
+
+
+
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:00,884 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    ;
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);;
+
+
+
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:01,032 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,032 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,032 [I] response:
+[1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1]	(at model.py:143) 
+2019-01-29 05:52:01,032 [I] response:
+[1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1]	(at model.py:143) 
+2019-01-29 05:52:01,033 [I] Criterion ORBS:39:8:j (10): response_idx:11, vector_idx:32	(at model.py:127) 
+2019-01-29 05:52:01,033 [I] Criterion ORBS:39:8:j (10): response_idx:11, vector_idx:32	(at model.py:127) 
+2019-01-29 05:52:01,033 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:01,033 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:01,036 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:01,036 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:01,184 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,184 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,185 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:01,185 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:01,185 [I] Criterion ORBS:51:8:k (11): response_idx:12, vector_idx:33	(at model.py:127) 
+2019-01-29 05:52:01,185 [I] Criterion ORBS:51:8:k (11): response_idx:12, vector_idx:33	(at model.py:127) 
+2019-01-29 05:52:01,185 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:01,185 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:01,188 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:01,188 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:01,321 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,321 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,322 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:01,322 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:01,322 [I] Criterion ORBS:61:12:k (12): response_idx:13, vector_idx:34	(at model.py:127) 
+2019-01-29 05:52:01,322 [I] Criterion ORBS:61:12:k (12): response_idx:13, vector_idx:34	(at model.py:127) 
+2019-01-29 05:52:01,322 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:01,322 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:01,324 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:01,324 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:01,453 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,453 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,453 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:01,453 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:01,454 [I] Criterion ORBS:66:12:k (13): response_idx:14, vector_idx:35	(at model.py:127) 
+2019-01-29 05:52:01,454 [I] Criterion ORBS:66:12:k (13): response_idx:14, vector_idx:35	(at model.py:127) 
+2019-01-29 05:52:01,454 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:01,454 [I] inferred factor:
+[0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1]	(at model.py:137) 
+2019-01-29 05:52:01,456 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:01,456 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    k = (int) strtol(argv[2], NULL, 10);
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);k = f2(k);printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);if(k < 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);return k + 10;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);return k - 2;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:01,586 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,586 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,586 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:01,586 [I] response:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]	(at model.py:143) 
+2019-01-29 05:52:01,586 [I] Criterion ORBS:71:12:j (14): response_idx:15, vector_idx:36	(at model.py:127) 
+2019-01-29 05:52:01,586 [I] Criterion ORBS:71:12:j (14): response_idx:15, vector_idx:36	(at model.py:127) 
+2019-01-29 05:52:01,587 [I] inferred factor:
+[0 1 0 0 0 0 0 0 1 0 1 0 1 0 1 1 0 1 1 0 1]	(at model.py:137) 
+2019-01-29 05:52:01,587 [I] inferred factor:
+[0 1 0 0 0 0 0 0 1 0 1 0 1 0 1 1 0 1 1 0 1]	(at model.py:137) 
+2019-01-29 05:52:01,590 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    ;
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);;
+
+
+
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:01,590 [D] Filename:mbe.c Code:
+/* This file is part of the ORBS distribution.
+ * See the file LICENSE.TXT for more information. 
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int p(int j);
+int q(int k);
+
+int f1(int k);
+int f2(int k);
+int f3(int j);
+
+int main(int argc, char *argv[])
+{
+    int j;
+    int k;
+
+    j = (int) strtol(argv[1], NULL, 10);
+    ;
+
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);if (q(k))
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);k = f1(k);printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        }
+        else
+        {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);;printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);j = f3(j);printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);}
+    printf("\nORBS:%d:%d:%s:%d\n", 34, 20, "j", j);;
+}
+
+int p(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 39, 8, "j", j);if(j > 0)
+    {
+        ;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int q(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 51, 8, "k", k);;
+
+
+
+
+    return 0;
+}
+
+int f1(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 61, 12, "k", k);;
+}
+
+int f2(int k)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 66, 12, "k", k);;
+}
+
+int f3(int j)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 71, 12, "j", j);return j - 15;
+}
+
+int x(int y)
+{
+    ;
+}
+	(at cstmt_factor_manager.py:84) 
+2019-01-29 05:52:01,719 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,719 [I] succ: True	(at model.py:142) 
+2019-01-29 05:52:01,720 [I] response:
+[1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1]	(at model.py:143) 
+2019-01-29 05:52:01,720 [I] response:
+[1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1]	(at model.py:143) 
+2019-01-29 05:52:01,720 [I] success rate: 1.0	(at model.py:183) 
+2019-01-29 05:52:01,720 [I] success rate: 1.0	(at model.py:183) 

@@ -1,0 +1,18 @@
+wc.c: In function ‘main’:
+wc.c:14:1: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+ printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);
+ ^
+wc.c:14:1: warning: incompatible implicit declaration of built-in function ‘printf’
+wc.c:14:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+wc.c:15:8: warning: implicit declaration of function ‘scanf’ [-Wimplicit-function-declaration]
+ while (scanf("%c", &c) == 1)
+        ^
+wc.c:15:8: warning: incompatible implicit declaration of built-in function ‘scanf’
+wc.c:15:8: note: include ‘<stdio.h>’ or provide a declaration of ‘scanf’
+wc.c:36:1: error: expected expression before ‘}’ token
+ }
+ ^
+wc.c: At top level:
+wc.c:50:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^

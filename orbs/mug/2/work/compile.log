@@ -1,0 +1,4 @@
+mug.c: In function ‘main’:
+mug.c:12:5: error: expected declaration or statement at end of input
+     int c;
+     ^

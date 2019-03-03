@@ -1,0 +1,14 @@
++ #include <stdio.h>
++ int isletter(char c);
+  int main(int argc, char *argv[])
+  {
++ int characters;
++ int lines;
++ int inword;
+  int words;
++ char c;
++ words = 0;
+  }
++ int isletter(char c)
++ {
++ }

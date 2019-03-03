@@ -1,0 +1,27 @@
+cc     mbe.c   -o mbe
+mbe.c: In function ‘main’:
+mbe.c:19:15: warning: implicit declaration of function ‘strtol’ [-Wimplicit-function-declaration]
+     j = (int) strtol(argv[1], NULL, 10);
+               ^
+mbe.c:22:12: warning: implicit declaration of function ‘p’ [-Wimplicit-function-declaration]
+     while (p(j))
+            ^
+mbe.c:24:13: warning: implicit declaration of function ‘q’ [-Wimplicit-function-declaration]
+         if (q(k))
+             ^
+mbe.c:26:17: warning: implicit declaration of function ‘f1’ [-Wimplicit-function-declaration]
+             k = f1(k);
+                 ^
+mbe.c:32:17: warning: implicit declaration of function ‘f2’ [-Wimplicit-function-declaration]
+             k = f2(k);
+                 ^
+mbe.c:33:17: warning: implicit declaration of function ‘f3’ [-Wimplicit-function-declaration]
+             j = f3(j);
+                 ^
+mbe.c: In function ‘p’:
+mbe.c:74:1: error: expected declaration or statement at end of input
+ }
+ ^
+mbe.c:74:1: error: expected declaration or statement at end of input
+<builtin>: recipe for target 'mbe' failed
+make: *** [mbe] Error 1

@@ -1,0 +1,17 @@
+  int main(int argc, char *argv[])
+  c = atoi(argv[2]);
++ while (p(i))
+  if (q(c))
+  x = f();
++ c = g();
++ i = h(i);
+  }
++ bool p(int i)
+  bool q(int i)
+  if (i < 0)
+  return true;
+  return false;
++ int h(int i)
+  int f()
+  return -100;
++ int g()

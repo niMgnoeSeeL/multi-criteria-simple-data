@@ -1,0 +1,8 @@
+[22:70 - 26:14]
+if (inword == 0) {
+    printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);
+    words = words + 1;
+    printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+    inword = 1;
+    printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+}

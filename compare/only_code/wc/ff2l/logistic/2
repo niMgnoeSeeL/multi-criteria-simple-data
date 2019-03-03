@@ -1,0 +1,6 @@
+  int main(int argc, char *argv[])
++ inword = 0;
++ int isletter(char c)
++ printf("%c ", c);
++ if (((c >= 'A') && (c <= 'Z'))
++ || ((c >= 'a') && (c <= 'z')))

@@ -1,0 +1,104 @@
+2019-03-02 22:11:53,486 [I] output_path: output/model/mug/random/logistic	(at model.py:166) 
+2019-03-02 22:11:53,487 [I] factor_size: 9	(at model.py:121) 
+2019-03-02 22:11:53,487 [I] response_size: 15	(at model.py:122) 
+2019-03-02 22:11:53,505 [I] Criteria path loaded (path:output/original/mug/scripts/test/criteria)	(at model.py:43) 
+2019-03-02 22:11:53,507 [I] unique response cnt: 20	(at model.py:179) 
+2019-03-02 22:11:53,507 [I] 1 1 1 1 1 1 0 0 0 1 1 0 1 0 1	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 1 0 1 1 0 0 0 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 0 1 1 1 0 0 1 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 0 1 1 1 0 0 0 1 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 1 0 1 1 0 0 0 1 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 0 0 1 1 0 0 1 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 1 1 1 1 1 0 1 0 1 1 1 1 0 1	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 0 1 1 1 0 0 1 1 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 0 0 1 1 0 0 0 1 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 1 0 1 1 0 0 1 1 0 0 1 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 1 0 1 1 0 0 1 0 0 0 1 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 0 0 1 1 0 0 1 1 0 0 0 0 0 0	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] 1 1 1 0 1 1 0 0 0 1 1 0 1 0 1	(at model.py:181) 
+2019-03-02 22:11:53,507 [I] Criterion ORBS:14:5:i (1): response_idx:2, vector_idx:11	(at model.py:135) 
+2019-03-02 22:11:53,509 [I] inferred factor:
+[0 1 1 1 1 1 1 1 1]	(at model.py:145) 
+2019-03-02 22:11:54,337 [I] succ: True	(at model.py:150) 
+2019-03-02 22:11:54,337 [I] response:
+[1 0 1 0 1 0 0 0 0 0 0 0 0 0 0]	(at model.py:151) 
+2019-03-02 22:11:54,338 [I] Criterion ORBS:15:5:c (2): response_idx:3, vector_idx:12	(at model.py:135) 
+2019-03-02 22:11:54,340 [I] inferred factor:
+[1 0 1 1 1 1 1 1 1]	(at model.py:145) 
+2019-03-02 22:11:55,603 [I] succ: True	(at model.py:150) 
+2019-03-02 22:11:55,604 [I] response:
+[1 0 0 1 1 0 0 0 0 0 0 0 0 0 0]	(at model.py:151) 
+2019-03-02 22:11:55,604 [I] Criterion ORBS:16:5:x (3): response_idx:4, vector_idx:13	(at model.py:135) 
+2019-03-02 22:11:55,604 [I] inferred factor:
+[1 1 1 1 1 1 1 1 1]	(at model.py:145) 
+2019-03-02 22:11:57,764 [I] succ: True	(at model.py:150) 
+2019-03-02 22:11:57,764 [I] response:
+[1 0 0 0 1 0 0 0 0 0 0 0 0 0 0]	(at model.py:151) 
+2019-03-02 22:11:57,765 [I] Criterion ORBS:17:14:i (4): response_idx:5, vector_idx:14	(at model.py:135) 
+2019-03-02 22:11:57,767 [I] inferred factor:
+[0 1 1 1 0 1 0 1 1]	(at model.py:145) 
+2019-03-02 22:11:58,096 [I] succ: True	(at model.py:150) 
+2019-03-02 22:11:58,097 [I] response:
+[1 1 1 0 1 1 0 0 0 1 1 0 1 0 1]	(at model.py:151) 
+2019-03-02 22:11:58,097 [I] Criterion ORBS:19:15:c (5): response_idx:6, vector_idx:15	(at model.py:135) 
+2019-03-02 22:11:58,099 [I] inferred factor:
+[0 0 1 1 0 0 0 1 0]	(at model.py:145) 
+2019-03-02 22:11:58,613 [I] succ: True	(at model.py:150) 
+2019-03-02 22:11:58,614 [I] response:
+[1 1 1 1 1 1 1 0 1 1 1 0 1 1 1]	(at model.py:151) 
+2019-03-02 22:11:58,614 [I] Criterion ORBS:21:13:x (6): response_idx:7, vector_idx:16	(at model.py:135) 
+2019-03-02 22:11:58,617 [I] inferred factor:
+[1 0 1 1 1 0 1 0 1]	(at model.py:145) 
+2019-03-02 22:11:59,445 [I] succ: True	(at model.py:150) 
+2019-03-02 22:11:59,446 [I] response:
+[1 0 0 1 1 0 0 1 0 0 0 0 0 0 0]	(at model.py:151) 
+2019-03-02 22:11:59,446 [I] Criterion ORBS:22:13:c (7): response_idx:8, vector_idx:17	(at model.py:135) 
+2019-03-02 22:11:59,448 [I] inferred factor:
+[1 0 1 1 1 0 1 1 0]	(at model.py:145) 
+2019-03-02 22:12:00,583 [I] succ: True	(at model.py:150) 
+2019-03-02 22:12:00,583 [I] response:
+[1 0 0 1 1 0 0 0 1 0 0 0 0 0 0]	(at model.py:151) 
+2019-03-02 22:12:00,583 [I] Criterion ORBS:24:15:i (8): response_idx:9, vector_idx:18	(at model.py:135) 
+2019-03-02 22:12:00,585 [I] inferred factor:
+[0 1 1 1 0 1 0 1 1]	(at model.py:145) 
+2019-03-02 22:12:01,021 [I] succ: True	(at model.py:150) 
+2019-03-02 22:12:01,022 [I] response:
+[1 1 1 0 1 1 0 0 0 1 1 0 1 0 1]	(at model.py:151) 
+2019-03-02 22:12:01,022 [I] Criterion ORBS:24:9:i (9): response_idx:10, vector_idx:19	(at model.py:135) 
+2019-03-02 22:12:01,025 [I] inferred factor:
+[0 1 1 1 0 1 0 1 1]	(at model.py:145) 
+2019-03-02 22:12:01,731 [I] succ: True	(at model.py:150) 
+2019-03-02 22:12:01,732 [I] response:
+[1 1 1 0 1 1 0 0 0 1 1 0 1 0 1]	(at model.py:151) 
+2019-03-02 22:12:01,732 [I] Criterion ORBS:26:20:x (10): response_idx:11, vector_idx:20	(at model.py:135) 
+2019-03-02 22:12:01,734 [I] inferred factor:
+[1 0 1 1 0 0 0 0 1]	(at model.py:145) 
+2019-03-02 22:12:02,628 [I] succ: True	(at model.py:150) 
+2019-03-02 22:12:02,628 [I] response:
+[1 1 0 1 1 0 0 1 0 0 0 1 0 0 0]	(at model.py:151) 
+2019-03-02 22:12:02,628 [I] Criterion ORBS:30:9:i (11): response_idx:12, vector_idx:21	(at model.py:135) 
+2019-03-02 22:12:02,630 [I] inferred factor:
+[0 1 1 1 0 1 0 1 1]	(at model.py:145) 
+2019-03-02 22:12:03,533 [I] succ: True	(at model.py:150) 
+2019-03-02 22:12:03,534 [I] response:
+[1 1 1 0 1 1 0 0 0 1 1 0 1 0 1]	(at model.py:151) 
+2019-03-02 22:12:03,534 [I] Criterion ORBS:41:9:i (12): response_idx:13, vector_idx:22	(at model.py:135) 
+2019-03-02 22:12:03,536 [I] inferred factor:
+[0 0 1 1 0 0 0 1 0]	(at model.py:145) 
+2019-03-02 22:12:03,927 [I] succ: True	(at model.py:150) 
+2019-03-02 22:12:03,928 [I] response:
+[1 1 1 1 1 1 1 0 1 1 1 0 1 1 1]	(at model.py:151) 
+2019-03-02 22:12:03,928 [I] Criterion ORBS:52:12:i (13): response_idx:14, vector_idx:23	(at model.py:135) 
+2019-03-02 22:12:03,931 [I] inferred factor:
+[0 1 1 1 0 1 0 1 1]	(at model.py:145) 
+2019-03-02 22:12:04,331 [I] succ: True	(at model.py:150) 
+2019-03-02 22:12:04,331 [I] response:
+[1 1 1 0 1 1 0 0 0 1 1 0 1 0 1]	(at model.py:151) 
+2019-03-02 22:12:04,331 [I] success rate: 1.0	(at model.py:190) 

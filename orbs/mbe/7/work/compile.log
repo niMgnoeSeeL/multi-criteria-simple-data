@@ -1,0 +1,20 @@
+cc     mbe.c   -o mbe
+mbe.c: In function ‘main’:
+mbe.c:19:15: warning: implicit declaration of function ‘strtol’ [-Wimplicit-function-declaration]
+     j = (int) strtol(argv[1], NULL, 10);
+               ^
+mbe.c:22:12: warning: implicit declaration of function ‘p’ [-Wimplicit-function-declaration]
+     while (p(j))
+            ^
+mbe.c:33:5: warning: implicit declaration of function ‘f3’ [-Wimplicit-function-declaration]
+ j = f3(j);
+     ^
+mbe.c: At top level:
+mbe.c:35:5: error: expected identifier or ‘(’ before ‘}’ token
+     }
+     ^
+mbe.c:37:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+<builtin>: recipe for target 'mbe' failed
+make: *** [mbe] Error 1

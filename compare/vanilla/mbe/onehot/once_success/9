@@ -1,0 +1,52 @@
+  #include <stdio.h>
++ #include <stdlib.h>
++ int p(int j);
++ int q(int k);
++ int f1(int k);
++ int f2(int k);
++ int f3(int j);
+  int main(int argc, char *argv[])
+  {
+  int j;
++ int k;
+  j = (int) strtol(argv[1], NULL, 10);
+  while (p(j))
+  {
++ if (q(k))
++ {
++ k = f1(k);
++ }
++ else
+  {
+  j = f3(j);
+  }
+  }
+  }
+  int p(int j)
+  {
+  if(j > 0)
+  {
+- return 1;
+  }
++ else
++ {
++ return 0;
++ }
++ }
++ int q(int k)
++ {
++ return 0;
++ }
++ int f1(int k)
++ {
++ }
++ int f2(int k)
++ {
+  }
+  int f3(int j)
+  {
+  return j - 15;
+  }
++ int x(int y)
++ {
++ }

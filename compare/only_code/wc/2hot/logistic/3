@@ -1,0 +1,3 @@
+  int main(int argc, char *argv[])
++ words = 0;
++ int isletter(char c)

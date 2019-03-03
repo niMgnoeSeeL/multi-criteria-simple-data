@@ -1,0 +1,6 @@
+[39:51 - 46:6]
+if (j > 0) {
+    return 1;
+} else {
+    return 0;
+}

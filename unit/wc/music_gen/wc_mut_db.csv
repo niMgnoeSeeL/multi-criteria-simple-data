@@ -1,0 +1,228 @@
+Mutant Filename,Mutation Operator,Line#,Before Mutation,,,,,After Mutation
+,,,Start Line#,Start Col#,End Line#,End Col#,Target Token,Start Line#,Start Col#,End Line#,End Col#,Mutated Token
+wc.MUT1.c,SSDL,276,10,5,10,20,characters = 0,10,5,10,6,;
+wc.MUT2.c,SSDL,276,10,20,10,84,printf("\nORBS:%d:%d:%s:%d\n", 10, 5, "characters", characters),10,20,10,21,;
+wc.MUT3.c,SSDL,276,11,5,11,16,inword = 0,11,5,11,6,;
+wc.MUT4.c,SSDL,276,11,16,11,72,printf("\nORBS:%d:%d:%s:%d\n", 11, 5, "inword", inword),11,16,11,17,;
+wc.MUT5.c,SSDL,276,12,5,12,15,words = 0,12,5,12,6,;
+wc.MUT6.c,SSDL,276,12,15,12,69,printf("\nORBS:%d:%d:%s:%d\n", 12, 5, "words", words),12,15,12,16,;
+wc.MUT7.c,SSDL,276,13,5,13,52,printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c),13,5,13,6,;
+wc.MUT8.c,SSDL,276,13,52,32,53,while (scanf("%c", &c) == 1)
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);
+        characters = characters + 1;
+        printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+        printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);
+        if (c == '\n') {
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);
+            lines = lines + 1;
+            printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);
+        if (isletter(c)) {
+            printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);
+            if (inword == 0) {
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);
+                words = words + 1;
+                printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+                inword = 1;
+                printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+            }
+        } else {
+            inword = 0;
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);
+    }
+,13,52,13,53,;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+wc.MUT9.c,SSDL,276,14,5,32,53,{
+    printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters);
+    characters = characters + 1;
+    printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters);
+    printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c);
+    if (c == '\n') {
+        printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);
+        lines = lines + 1;
+        printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+    }
+    printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c);
+    if (isletter(c)) {
+        printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);
+        if (inword == 0) {
+            printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);
+            words = words + 1;
+            printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+            inword = 1;
+            printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+        }
+    } else {
+        inword = 0;
+        printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+    }
+    printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c);
+}
+,14,5,14,6,{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+wc.MUT10.c,SSDL,276,15,9,15,74,printf("\nORBS:%d:%d:%s:%d\n", 15, 22, "characters", characters),15,9,15,10,;
+wc.MUT11.c,SSDL,276,15,74,15,102,characters = characters + 1,15,74,15,75,;
+wc.MUT12.c,SSDL,276,15,102,15,166,printf("\nORBS:%d:%d:%s:%d\n", 15, 9, "characters", characters),15,102,15,103,;
+wc.MUT13.c,SSDL,276,16,9,16,56,printf("\nORBS:%d:%d:%s:%d\n", 16, 13, "c", c),16,9,16,10,;
+wc.MUT14.c,SSDL,276,16,56,19,10,if (c == '\n') {
+    printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);
+    lines = lines + 1;
+    printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+}
+,16,56,16,57,;
+
+
+
+wc.MUT15.c,SSDL,276,17,9,19,10,{
+    printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines);
+    lines = lines + 1;
+    printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines);
+}
+,17,9,17,10,{
+
+}
+wc.MUT16.c,SSDL,276,18,13,18,68,printf("\nORBS:%d:%d:%s:%d\n", 18, 21, "lines", lines),18,13,18,14,;
+wc.MUT17.c,SSDL,276,18,68,18,86,lines = lines + 1,18,68,18,69,;
+wc.MUT18.c,SSDL,276,18,86,18,141,printf("\nORBS:%d:%d:%s:%d\n", 18, 13, "lines", lines),18,86,18,87,;
+wc.MUT19.c,SSDL,276,20,9,20,56,printf("\nORBS:%d:%d:%s:%d\n", 20, 22, "c", c),20,9,20,10,;
+wc.MUT20.c,SSDL,276,20,56,31,10,if (isletter(c)) {
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);
+    if (inword == 0) {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);
+        words = words + 1;
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+        inword = 1;
+        printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+    }
+} else {
+    inword = 0;
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+}
+,20,56,20,57,;
+
+
+
+
+
+
+
+
+
+
+
+wc.MUT21.c,SSDL,276,21,9,27,10,{
+    printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword);
+    if (inword == 0) {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);
+        words = words + 1;
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+        inword = 1;
+        printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+    }
+}
+,21,9,21,10,{
+
+
+
+
+
+}
+wc.MUT22.c,SSDL,276,22,13,22,70,printf("\nORBS:%d:%d:%s:%d\n", 22, 17, "inword", inword),22,13,22,14,;
+wc.MUT23.c,SSDL,276,22,70,26,14,if (inword == 0) {
+    printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);
+    words = words + 1;
+    printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+    inword = 1;
+    printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+}
+,22,70,22,71,;
+
+
+
+
+wc.MUT24.c,SSDL,276,23,13,26,14,{
+    printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words);
+    words = words + 1;
+    printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words);
+    inword = 1;
+    printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword);
+}
+,23,13,23,14,{
+
+
+}
+wc.MUT25.c,SSDL,276,24,17,24,72,printf("\nORBS:%d:%d:%s:%d\n", 24, 25, "words", words),24,17,24,18,;
+wc.MUT26.c,SSDL,276,24,72,24,90,words = words + 1,24,72,24,73,;
+wc.MUT27.c,SSDL,276,24,90,24,145,printf("\nORBS:%d:%d:%s:%d\n", 24, 17, "words", words),24,90,24,91,;
+wc.MUT28.c,SSDL,276,25,17,25,28,inword = 1,25,17,25,18,;
+wc.MUT29.c,SSDL,276,25,28,25,85,printf("\nORBS:%d:%d:%s:%d\n", 25, 17, "inword", inword),25,28,25,29,;
+wc.MUT30.c,SSDL,276,29,9,31,10,{
+    inword = 0;
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+}
+,29,9,29,10,{
+
+}
+wc.MUT31.c,SSDL,276,30,13,30,24,inword = 0,30,13,30,14,;
+wc.MUT32.c,SSDL,276,30,24,30,81,printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword),30,24,30,25,;
+wc.MUT33.c,SSDL,276,32,5,32,52,printf("\nORBS:%d:%d:%s:%d\n", 13, 25, "c", c),32,5,32,6,;
+wc.MUT34.c,SSDL,276,36,5,36,52,printf("\nORBS:%d:%d:%s:%d\n", 36, 19, "c", c),36,5,36,6,;
+wc.MUT35.c,SSDL,276,36,52,36,69,printf("%c ", c),36,52,36,53,;
+wc.MUT36.c,SSDL,276,37,5,37,52,printf("\nORBS:%d:%d:%s:%d\n", 37, 11, "c", c),37,5,37,6,;
+wc.MUT37.c,SSDL,276,37,52,45,6,if (((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))) {
+    return 1;
+} else {
+    return 0;
+}
+,37,52,37,53,;
+
+
+
+
+
+
+
+
+wc.MUT38.c,SSDL,276,40,9,40,18,return 1;
+,40,9,40,10,;
+wc.MUT39.c,SSDL,276,44,9,44,18,return 0;
+,44,9,44,10,;

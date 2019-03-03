@@ -1,0 +1,13 @@
+wc.c: In function ‘main’:
+wc.c:28:9: error: ‘else’ without a previous ‘if’
+         else
+         ^
+wc.c:31:1: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+ printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+ ^
+wc.c:31:1: warning: incompatible implicit declaration of built-in function ‘printf’
+wc.c:31:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+wc.c: At top level:
+wc.c:35:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^

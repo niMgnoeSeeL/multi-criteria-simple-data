@@ -1,0 +1,5 @@
+[29:9 - 31:10]
+{
+    inword = 0;
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "inword", inword);
+}

@@ -1,0 +1,63 @@
+
+
+#include <stdbool.h>
+
+bool q(int c);
+
+
+
+int main(int argc, char *argv[])
+{
+
+    int c;
+
+
+    c = atoi(argv[2]);
+
+
+    {
+        if (q(c))
+        {
+
+            c = g();
+printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+bool q(int i)
+{
+    if (i < 0)
+    {
+        return true;
+    }
+
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+
+}
+
+
+
+
+int g()
+{
+    return 100;
+}

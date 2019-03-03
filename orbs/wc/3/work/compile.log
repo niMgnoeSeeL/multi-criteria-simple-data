@@ -1,0 +1,4 @@
+wc.c: In function ‘main’:
+wc.c:4:1: error: expected declaration or statement at end of input
+ {
+ ^

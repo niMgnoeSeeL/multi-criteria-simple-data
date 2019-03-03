@@ -1,0 +1,66 @@
+        -:    0:Source:mug.c
+        -:    0:Graph:mug.gcno
+        -:    0:Data:mug.gcda
+        -:    0:Runs:3
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <stdbool.h>
+        -:    4:bool p(int i);
+        -:    5:bool q(int c);
+        -:    6:int h(int i);
+        -:    7:int f();
+        -:    8:int g();
+        3:    9:int main(int argc, char *argv[])
+        -:   10:{
+        -:   11:    int i;
+        -:   12:    int c;
+        -:   13:    int x;
+        3:   14:    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+        3:   15:    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+        3:   16:    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+       14:   17:    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+        -:   18:    {
+        8:   19:        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        -:   20:        {
+        1:   21:            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+        1:   22:            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        -:   23:        }
+        8:   24:        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+        8:   25:    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+        3:   26:    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+        -:   27:}
+       11:   28:bool p(int i)
+        -:   29:{
+       11:   30:    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+        -:   31:    {
+        8:   32:        return true;
+        -:   33:    }
+        -:   34:    else
+        -:   35:    {
+        3:   36:        return false;
+        -:   37:    }
+        -:   38:}
+        8:   39:bool q(int i)
+        -:   40:{
+        8:   41:    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+        -:   42:    {
+        1:   43:        return true;
+        -:   44:    }
+        -:   45:    else
+        -:   46:    {
+        7:   47:        return false;
+        -:   48:    }
+        -:   49:}
+        8:   50:int h(int i)
+        -:   51:{
+        8:   52:    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+        -:   53:}
+        1:   54:int f()
+        -:   55:{
+        1:   56:    return -100;
+        -:   57:}
+        1:   58:int g()
+        -:   59:{
+        1:   60:    return 100;
+        -:   61:}

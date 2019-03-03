@@ -1,0 +1,63 @@
+
+
+#include <stdbool.h>
+
+
+
+
+
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+
+
+    c = atoi(argv[2]);
+printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+
+
+
+    {
+
+        {
+
+
+        }
+        i = h(i);
+    }
+
+}
+bool p(int i)
+{
+
+    {
+
+
+
+
+
+    }
+}
+bool q(int i)
+{
+
+    {
+
+
+
+
+
+    }
+}
+int h(int i)
+{
+    return i - 1;
+}
+int f()
+{
+
+}
+int g()
+{
+
+}

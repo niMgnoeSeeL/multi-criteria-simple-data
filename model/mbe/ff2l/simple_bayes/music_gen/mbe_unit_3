@@ -1,0 +1,18 @@
+[22:52 - 33:53]
+while (p(j))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "k", k);
+        if (q(k)) {
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "k", k);
+            k = f1(k);
+            printf("\nORBS:%d:%d:%s:%d\n", 26, 13, "k", k);
+        } else {
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 20, "k", k);
+            k = f2(k);
+            printf("\nORBS:%d:%d:%s:%d\n", 30, 13, "k", k);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 20, "j", j);
+            j = f3(j);
+            printf("\nORBS:%d:%d:%s:%d\n", 31, 13, "j", j);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 22, 14, "j", j);
+    }

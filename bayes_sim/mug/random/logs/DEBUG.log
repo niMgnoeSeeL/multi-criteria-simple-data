@@ -1,0 +1,8092 @@
+2019-03-02 23:20:57,766 [I] output_path: output/bayes_sim/mug/random	(at bayes_similarity.py:161) 
+2019-03-02 23:20:57,767 [D] self._size = 9	(at cstmt_factor_manager.py:79) 
+2019-03-02 23:20:57,767 [D] self._factor[0] = ('mug.c', [14:5 - 14:23])	(at cstmt_factor_manager.py:80) 
+2019-03-02 23:20:57,767 [I] factor_size: 9	(at bayes_similarity.py:48) 
+2019-03-02 23:20:57,767 [I] response_size: 15	(at bayes_similarity.py:49) 
+2019-03-02 23:20:57,789 [I] Criteria path loaded (path:output/original/mug/scripts/test/criteria)	(at bayes_similarity.py:60) 
+2019-03-02 23:20:57,789 [I] Criterion ORBS:14:5:i (1): response_idx:2, vector_idx:11	(at bayes_similarity.py:129) 
+2019-03-02 23:20:57,789 [D] 0.00, 0.79, 0.76, 0.89, 0.88, 0.87, 0.81, 0.83, 0.79	(at bayes_similarity.py:82) 
+2019-03-02 23:20:57,789 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,791 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,791 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,793 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,794 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,795 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,797 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,799 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,800 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,802 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,803 [I] Criterion ORBS:15:5:c (2): response_idx:3, vector_idx:12	(at bayes_similarity.py:129) 
+2019-03-02 23:20:57,803 [D] 0.71, 0.00, 0.79, 0.67, 0.72, 0.70, 0.74, 0.67, 0.68	(at bayes_similarity.py:82) 
+2019-03-02 23:20:57,803 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,804 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,805 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,806 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,833 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,834 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,836 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,837 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,839 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,840 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,841 [I] Criterion ORBS:16:5:x (3): response_idx:4, vector_idx:13	(at bayes_similarity.py:129) 
+2019-03-02 23:20:57,841 [D] 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00	(at bayes_similarity.py:82) 
+2019-03-02 23:20:57,841 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,842 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,843 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,844 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,845 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,847 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,848 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,850 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,851 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,853 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,854 [I] Criterion ORBS:17:14:i (4): response_idx:5, vector_idx:14	(at bayes_similarity.py:129) 
+2019-03-02 23:20:57,854 [D] 0.00, 0.44, 0.41, 0.48, 0.00, 0.50, 0.00, 0.53, 0.46	(at bayes_similarity.py:82) 
+2019-03-02 23:20:57,854 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,855 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,856 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,857 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,858 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,859 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,861 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,863 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,865 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,867 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,868 [I] Criterion ORBS:19:15:c (5): response_idx:6, vector_idx:15	(at bayes_similarity.py:129) 
+2019-03-02 23:20:57,868 [D] 0.00, 0.00, 0.14, 0.15, 0.00, 0.00, 0.00, 0.13, 0.00	(at bayes_similarity.py:82) 
+2019-03-02 23:20:57,868 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,869 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,870 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,871 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,872 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,873 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,874 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,876 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,878 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,881 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,881 [I] Criterion ORBS:21:13:x (6): response_idx:7, vector_idx:16	(at bayes_similarity.py:129) 
+2019-03-02 23:20:57,882 [D] 0.38, 0.00, 0.41, 0.33, 0.36, 0.00, 0.41, 0.00, 0.39	(at bayes_similarity.py:82) 
+2019-03-02 23:20:57,882 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,883 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,883 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,944 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,950 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,956 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,966 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,974 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,983 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,994 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:57,999 [I] Criterion ORBS:22:13:c (7): response_idx:8, vector_idx:17	(at bayes_similarity.py:129) 
+2019-03-02 23:20:58,000 [D] 0.38, 0.00, 0.38, 0.37, 0.36, 0.00, 0.37, 0.37, 0.00	(at bayes_similarity.py:82) 
+2019-03-02 23:20:58,001 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,005 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,011 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,019 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,026 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,033 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,040 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,047 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,053 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,058 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,060 [I] Criterion ORBS:24:15:i (8): response_idx:9, vector_idx:18	(at bayes_similarity.py:129) 
+2019-03-02 23:20:58,061 [D] 0.00, 0.44, 0.41, 0.48, 0.00, 0.50, 0.00, 0.53, 0.46	(at bayes_similarity.py:82) 
+2019-03-02 23:20:58,061 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,064 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,066 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,067 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,069 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,072 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,074 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,076 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,079 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,082 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,083 [I] Criterion ORBS:24:9:i (9): response_idx:10, vector_idx:19	(at bayes_similarity.py:129) 
+2019-03-02 23:20:58,083 [D] 0.00, 0.44, 0.41, 0.48, 0.00, 0.50, 0.00, 0.53, 0.46	(at bayes_similarity.py:82) 
+2019-03-02 23:20:58,083 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,085 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,086 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,087 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,088 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,090 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,091 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,093 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,095 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,097 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,098 [I] Criterion ORBS:26:20:x (10): response_idx:11, vector_idx:20	(at bayes_similarity.py:129) 
+2019-03-02 23:20:58,098 [D] 0.21, 0.00, 0.17, 0.15, 0.00, 0.00, 0.00, 0.00, 0.18	(at bayes_similarity.py:82) 
+2019-03-02 23:20:58,099 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,099 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,121 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,122 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,123 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,124 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,125 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,128 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,130 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,132 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,133 [I] Criterion ORBS:30:9:i (11): response_idx:12, vector_idx:21	(at bayes_similarity.py:129) 
+2019-03-02 23:20:58,133 [D] 0.00, 0.44, 0.41, 0.48, 0.00, 0.50, 0.00, 0.53, 0.46	(at bayes_similarity.py:82) 
+2019-03-02 23:20:58,133 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,134 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,135 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,136 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,137 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,138 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,140 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,141 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,143 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,145 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,147 [I] Criterion ORBS:41:9:i (12): response_idx:13, vector_idx:22	(at bayes_similarity.py:129) 
+2019-03-02 23:20:58,147 [D] 0.00, 0.00, 0.14, 0.15, 0.00, 0.00, 0.00, 0.13, 0.00	(at bayes_similarity.py:82) 
+2019-03-02 23:20:58,147 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,149 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,150 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,151 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,152 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,154 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,155 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,157 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,158 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,160 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,161 [I] Criterion ORBS:52:12:i (13): response_idx:14, vector_idx:23	(at bayes_similarity.py:129) 
+2019-03-02 23:20:58,161 [D] 0.00, 0.44, 0.41, 0.48, 0.00, 0.50, 0.00, 0.53, 0.46	(at bayes_similarity.py:82) 
+2019-03-02 23:20:58,162 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+    return -100;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,162 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);if (i < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,164 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);printf("%d\n", x); // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,165 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+    return 100;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,166 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+    c = atoi(argv[2]);printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,168 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+    x = atoi(argv[3]);printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,169 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+    i = atoi(argv[1]);printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,170 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);if (i > 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,172 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);return i - 1;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 
+2019-03-02 23:20:58,174 [D] Filename:mug.c Code:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool p(int i);
+bool q(int c);
+int h(int i);
+int f();
+int g();
+int main(int argc, char *argv[])
+{
+    int i;
+    int c;
+    int x;
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 14, 5, "i", i);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 15, 5, "c", c);
+                     ;printf("\nORBS:%d:%d:%s:%d\n", 16, 5, "x", x);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);while (p(i))
+    {
+        printf("\nORBS:%d:%d:%s:%d\n", 19, 15, "c", c);if (q(c))
+        {
+            x = f();printf("\nORBS:%d:%d:%s:%d\n", 21, 13, "x", x);
+            c = g();printf("\nORBS:%d:%d:%s:%d\n", 22, 13, "c", c);
+        }
+        printf("\nORBS:%d:%d:%s:%d\n", 24, 15, "i", i);i = h(i);printf("\nORBS:%d:%d:%s:%d\n", 24, 9, "i", i);
+    printf("\nORBS:%d:%d:%s:%d\n", 17, 14, "i", i);}
+    printf("\nORBS:%d:%d:%s:%d\n", 26, 20, "x", x);                 ; // slice here
+}
+bool p(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 30, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+bool q(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 41, 9, "i", i);;
+
+
+
+
+
+
+     
+}
+int h(int i)
+{
+    printf("\nORBS:%d:%d:%s:%d\n", 52, 12, "i", i);            ;
+}
+int f()
+{
+               ;
+}
+int g()
+{
+              ;
+}	(at cstmt_factor_manager.py:107) 

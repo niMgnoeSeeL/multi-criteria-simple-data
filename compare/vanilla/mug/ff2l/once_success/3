@@ -1,0 +1,38 @@
++ #include <stdio.h>
++ #include <stdlib.h>
++ #include <stdbool.h>
++ bool p(int i);
++ bool q(int c);
++ int h(int i);
++ int f();
++ int g();
+  int main(int argc, char *argv[])
+  {
++ int i;
++ int c;
+  int x;
++ while (p(i))
++ {
++ if (q(c))
++ {
++ x = f();
++ c = g();
+  }
++ i = h(i);
++ }
++ }
++ bool p(int i)
++ {
++ }
++ bool q(int i)
++ {
++ }
++ int h(int i)
++ {
++ }
++ int f()
++ {
++ }
++ int g()
++ {
++ }
