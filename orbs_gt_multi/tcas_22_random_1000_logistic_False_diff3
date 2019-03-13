@@ -1,0 +1,245 @@
+====2
+1:2,6c
+3:2,6c
+  /*  -*- Last-Edit:  Fri Jan 29 11:13:27 1993 by Tarak S. Goradia; -*- */
+  /* $Log: tcas.c,v $
+   * Revision 1.2  1993/03/12  19:29:50  foster
+   * Correct logic bug which didn't allow output of 2 - hf
+   * */
+2:2,6c
+  
+  
+  
+  
+  
+====2
+1:14c
+3:14c
+  				/* variables */
+2:14c
+  
+====2
+1:32c
+3:32c
+  				/* state variables */
+2:32c
+  
+====2
+1:35,36c
+3:35,36c
+  #define DO_NOT_CLIMB 1
+  #define DO_NOT_DESCEND 2
+2:35,36c
+  
+  
+====2
+1:40c
+3:40c
+  #define OTHER 2
+2:40c
+  
+====2
+1:46c
+3:46c
+  #define DOWNWARD_RA 2
+2:46c
+  
+====
+1:50c
+      Positive_RA_Alt_Thresh[0] = 400;
+2:50c
+  
+3:50c
+                                     ;
+====
+1:52,53c
+      Positive_RA_Alt_Thresh[2] = 640;
+      Positive_RA_Alt_Thresh[3] = 740;
+2:52,53c
+  
+  
+3:52,53c
+                                     ;
+                                     ;
+====2
+1:69c
+3:69c
+      int upward_crossing_situation;
+2:69c
+  
+====
+1:81c
+      return result;
+2:81c
+  
+3:81c
+                   ;
+====2
+1:87c
+3:87c
+      int upward_crossing_situation;
+2:87c
+  
+====2
+1:93a
+3:93a
+2:94,97c
+  
+  
+  
+  
+====
+1:95,99c
+      else
+      {
+  	result = !(Own_Above_Threat()) || ((Own_Above_Threat()) && (Up_Separation >= ALIM()));
+      }
+      return result;
+2:99c
+  
+3:95,99c
+      else
+      ;
+  
+       
+                   ;
+====
+1:104c
+      return (Own_Tracked_Alt < Other_Tracked_Alt);
+2:104c
+  
+3:104c
+                                                  ;
+====3
+1:109c
+2:109c
+      return (Other_Tracked_Alt < Own_Tracked_Alt);
+3:109c
+                                                  ;
+====
+1:121,123c
+      
+      alt_sep = UNRESOLVED;
+      
+2:121,123c
+  
+  
+  
+3:121,123c
+      
+                          ;
+      
+====
+1:128,141c
+  	if (need_upward_RA && need_downward_RA)
+          /* unreachable: requires Own_Below_Threat and Own_Above_Threat
+             to both be true - that requires Own_Tracked_Alt < Other_Tracked_Alt
+             and Other_Tracked_Alt < Own_Tracked_Alt, which isn't possible */
+  	    {alt_sep = UNRESOLVED;}
+  	else {if (need_upward_RA)
+  	    {alt_sep = UPWARD_RA;}
+  	else {if (need_downward_RA)
+  	    {alt_sep = DOWNWARD_RA;}
+  	else
+  	    {alt_sep = UNRESOLVED;}}}
+      }
+      
+      return alt_sep;
+2:128,141c
+  	if (need_upward_RA && need_downward_RA)
+  
+  
+  
+  	    {alt_sep = UNRESOLVED;}
+  	else {if (need_upward_RA)
+  	    {alt_sep = UPWARD_RA;}
+  	else {if (need_downward_RA)
+  
+  
+  	    {alt_sep = UNRESOLVED;}}}
+      }
+  
+  
+3:128,141c
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	                                                                                        
+      }
+      
+                    ;
+====2
+1:145c
+3:145c
+  int argc;
+2:145c
+  
+====
+1:148,156c
+      if(argc < 13)
+      {
+  	fprintf(stdout, "Error: Command line arguments are\n");
+  	fprintf(stdout, "Cur_Vertical_Sep, High_Confidence, Two_of_Three_Reports_Valid\n");
+  	fprintf(stdout, "Own_Tracked_Alt, Own_Tracked_Alt_Rate, Other_Tracked_Alt\n");
+  	fprintf(stdout, "Alt_Layer_Value, Up_Separation, Down_Separation\n");
+  	fprintf(stdout, "Other_RAC, Other_Capability, Climb_Inhibit\n");
+  	exit(1);
+      }
+2:148,156c
+      if(argc < 13)
+      {
+  
+  
+  
+  
+  
+  	exit(1);
+      }
+3:148,156c
+      ;
+  
+  
+  
+  
+  
+  
+  
+       
+====
+1:162,163c
+      Own_Tracked_Alt_Rate = atoi(argv[5]);
+      Other_Tracked_Alt = atoi(argv[6]);
+2:162,163c
+  
+  
+3:162,163c
+                                          ;
+      Other_Tracked_Alt = atoi(argv[6]);
+====
+1:167c
+      Other_RAC = atoi(argv[10]);
+2:167c
+  
+3:167c
+                                ;
+====
+1:169c
+      Climb_Inhibit = atoi(argv[12]);
+2:169c
+  
+3:169c
+                                    ;
+====
+1:172c
+      exit(0);
+2:172c
+  
+3:172c
+             ;

@@ -1,0 +1,327 @@
+							      |	#include        <ctype.h>
+#include        <stdio.h>					#include        <stdio.h>
+#include        "std.h"						#include        "std.h"
+#include        "chisq.h"					#include        "chisq.h"
+#include        "gamma.h"               			#include        "gamma.h"               
+#define MAXLINE    256						#define MAXLINE    256
+#ifndef MAXTBL							#ifndef MAXTBL
+#define MAXTBL    1000						#define MAXTBL    1000
+#endif								#endif
+static char line[MAXLINE];              			static char line[MAXLINE];              
+static long f[MAXTBL];                  			static long f[MAXTBL];                  
+static int r;                           			static int r;                           
+static int c;                           			static int c;                           
+#define x(i, j)    f[(i)*c+(j)]         			#define x(i, j)    f[(i)*c+(j)]         
+							      |	#define COMMENT    '#'                  
+							      |	#ifndef NULL
+							      |	#define NULL    0
+							      |	#endif
+							      |	int
+main(argc, argv)						main(argc, argv)
+							      |	int argc;
+							      |	char *argv[];
+{								{
+	char *p;                					char *p;                
+	int i;                  					int i;                  
+	int j;                  					int j;                  
+	double info;            					double info;            
+	int infodf;             					int infodf;             
+							      >		double totinfo = 0.0;   
+							      >		int totdf;              
+							      >		         ;
+							      >		;
+
+
+
+	while (fgets(line, MAXLINE, stdin) != NULL) {         <
+		for (p = line; *p != '\0' && isspace((int)*p) <
+		}					      <
+		if (*p == '\0') {			      <
+			continue;       		      <
+
+
+
+
+		}					      <
+		if (sscanf(p, "%d %d\n", &r, &c) != 2) {      <
+
+
+
+
+
+
+		}					      <
+		for (i = 0; i < r; ++i) {		      <
+			for (j = 0; j < c; ++j) {	      <
+				if (scanf(" %ld", &x(i, j)) ! <
+
+
+
+					return (EXIT_FAILURE) <
+				}			      <
+			}				      <
+		}					      <
+		info = InfoTbl(r, c, f, &infodf);	      <
+		if (info >= 0.0) {			      <
+			(void)printf("2info = %5.2f\tdf = %2d <
+
+			    QChiSq(info, infodf)	      <
+			    );				      <
+
+
+
+			(void)fputs(info < -3.5 ? "out of mem <
+
+
+			    : "table all zeros\n",	      <
+			    stdout			      <
+			    );				      <
+		}					      <
+
+
+
+
+	}						      <
+
+
+
+
+
+}							      <
+
+
+
+double							      <
+LGamma(x)						      <
+double x;						      <
+{							      <
+							      <
+
+
+
+
+
+	if (--x < 0.0) {        			      <
+
+
+	}						      <
+
+
+							      >		 
+							      >		;
+
+
+							      >		 
+							      >		                                                     
+
+
+							      >		      
+							      >		                     ;
+							      >	}
+							      >	#include        <math.h>
+							      >	#include        <stdio.h>
+							      >	#include        "std.h"
+							      >	double
+							      >	LGamma(x)
+							      >	double x;
+							      >	{
+							      >		static const double cof[6] = {
+							      >			76.18009173,	-86.50532033, 24.01409822,
+							      >			-1.231739516, 0.120858003e-2, -0.536382e-5
+							      >		};
+							      >		double tmp, ser;
+							      >		int j;
+							      >		;
+							      >
+							      >
+							      >		 
+							      >		             ;
+							      >		                           ;
+							      >		         ;
+							      >		;
+
+							      >		                                                     
+							      >		                                        ;
+}								}
+#define ITMAX		100					#define ITMAX		100
+#define EPS		3.0e-7					#define EPS		3.0e-7
+							      |	static double
+gser(a, x)							gser(a, x)
+							      |	double a, x;
+{								{
+							      >		double ap, del, sum;
+							      >		int n;
+							      >		;
+
+							      >		 
+							      >		                          ;
+							      >		;
+
+
+
+
+							      |		                                                     
+							      <
+							      <
+							      <
+							      <
+							      <
+							      <
+}								}
+							      |	static double
+gcf(a, x)							gcf(a, x)
+double a, x;							double a, x;
+{								{
+	int n;								int n;
+	double gold = 0.0, fac = 1.0, b1 = 1.0,				double gold = 0.0, fac = 1.0, b1 = 1.0,
+	    b0 = 0.0, a0 = 1.0, a1 = x;					    b0 = 0.0, a0 = 1.0, a1 = x;
+	for (n = 1; n <= ITMAX; ++n) {			      |		;
+							      >
+							      >
+							      >
+							      >
+
+
+
+
+
+
+
+
+		if (a1 != 0.0) {        		      <
+			double g = b1 * (fac = 1.0 / a1);     <
+
+			if (Abs(gold) < EPS * Abs(g)) {	      <
+				return (exp(-x + a * log(x) - <
+			}				      <
+
+		}					      |
+	}						      |
+							      >		                                                     
+}								}
+double								double
+QGamma(a, x)							QGamma(a, x)
+double a, x;							double a, x;
+{								{
+	return (x < a + 1.0 ? 1.0 - gser(a, x) : gcf(a, x));  |		                                                   ;
+}								}
+double								double
+QChiSq(chisq, df)						QChiSq(chisq, df)
+double chisq;							double chisq;
+							      |	int df;
+{								{
+	return (QGamma((double)df / 2.0, chisq / 2.0));	      |		                                              ;
+}								}
+							      |	#include        <math.h>               
+							      |	#if __STDC__
+							      |	#include        <stdlib.h>              
+							      |	#include        "std.h"
+							      |	#else
+							      |	#include        "std.h"
+							      |	extern pointer malloc();
+							      |	extern void free();
+							      |	#endif
+							      |	#ifndef NULL
+							      |	#define NULL    0
+							      |	#endif
+							      |	#define x(i, j)    f[(i)*c+(j)]         
+double								double
+InfoTbl(r, c, f, pdf)						InfoTbl(r, c, f, pdf)
+							      |	int r;                          
+							      |	int c;                          
+const long *f;                  				const long *f;                  
+int *pdf;                       				int *pdf;                       
+{								{
+	int i;                  					int i;                  
+	int j;                  					int j;                  
+	double N;               					double N;               
+							      |		double info;            
+	double *xi;             					double *xi;             
+							      |		double *xj;             
+	int rdf = r - 1;        			      |		int rdf =      ;        
+	int cdf = c - 1;        			      |		int cdf =      ;        
+							      |		;
+							      <
+							      <
+							      <
+	*pdf = rdf * cdf;               		      <
+	if ((xi = (double *)malloc(r * sizeof(double))) == NU <
+							      <
+							      <
+	}						      <
+							      <
+							      <
+							      <
+							      <
+							      <
+	for (i = 0; i < r; ++i) {			      <
+		double sum = 0.0;       		      <
+		for (j = 0; j < c; ++j) {		      <
+			long k = x(i, j);		      <
+
+
+							      >		 
+							      >		                ;               
+							      >		;
+
+
+			sum += (double)k;		      |		 
+		}					      |		;
+		N += xi[i] = sum;			      <
+
+
+							      >		 
+							      >		       ;
+							      >		;
+
+
+
+
+
+
+
+
+
+
+							      >		                                                     
+							      >		;
+
+
+		double pi = xi[i];      		      |		 
+		if (pi > 0.0) {				      |		;
+
+
+
+			double pij = (double)x(i, j);	      <
+
+
+							      >		                                                     
+							      >		                 ;                                   
+							      >		;
+
+		}					      <
+
+
+
+
+
+
+	}						      <
+
+
+
+							      >		                                                     
+							      >		;
+
+
+
+
+							      >		                                                     
+							      >		           ;                    
+							      >	ret1:
+							      >		                 ;
+							      >	ret2:
+							      >		                 ;
+							      >	ret3:
+							      >		             ;
+}								}

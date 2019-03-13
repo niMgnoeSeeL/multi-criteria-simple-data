@@ -1,0 +1,635 @@
+====2
+1:1c
+3:1c
+  #include        <ctype.h>
+2:1c
+  
+====2
+1:16,19c
+3:16,19c
+  #ifndef NULL
+  #define NULL    0
+  #endif
+  int
+2:16,19c
+  
+  
+  
+  
+====2
+1:21,22c
+3:21,22c
+  int argc;
+  char *argv[];
+2:21,22c
+  
+  
+====
+1:30,110c
+  	int totdf;              
+  	totdf = 0;
+  	while (fgets(line, MAXLINE, stdin) != NULL) {   
+  		for (p = line; *p != '\0' && isspace((int)*p); ++p) {
+  		}
+  		if (*p == '\0') {
+  			continue;       
+  		}
+  		if (*p == COMMENT) {    
+  			(void)fputs(line, stdout);
+  			continue;
+  		}
+  		if (sscanf(p, "%d %d\n", &r, &c) != 2) {
+  			(void)fputs("* invalid row/column line *\n", stdout);
+  			return (EXIT_FAILURE);
+  		}
+  		if (r * c > MAXTBL) {
+  			(void)fputs("* table too large *\n", stdout);
+  			return (EXIT_FAILURE);
+  		}
+  		for (i = 0; i < r; ++i) {
+  			for (j = 0; j < c; ++j) {
+  				if (scanf(" %ld", &x(i, j)) != 1) {
+  					(void)fputs("* EOF in table *\n",
+  					    stdout
+  					    );
+  					return (EXIT_FAILURE);
+  				}
+  			}
+  		}
+  		info = InfoTbl(r, c, f, &infodf);
+  		if (info >= 0.0) {
+  			(void)printf("2info = %5.2f\tdf = %2d\tq = %7.4f\n",
+  			    info, infodf,
+  			    QChiSq(info, infodf)
+  			    );
+  			totinfo += info;
+  			totdf += infodf;
+  		}else          {
+  			(void)fputs(info < -3.5 ? "out of memory\n"
+  			    : info < -2.5 ? "table too small\n"
+  			    : info < -1.5 ? "negative freq\n"
+  			    : "table all zeros\n",
+  			    stdout
+  			    );
+  		}
+  	}
+  	if (totdf <= 0) {
+  		(void)fputs("\n*** no information accumulated ***\n", stdout);
+  		return (EXIT_FAILURE);
+  	}
+  	(void)printf("\ntotal 2info = %5.2f\tdf = %2d\tq = %7.4f\n",
+  	    totinfo, totdf,
+  	    QChiSq(totinfo, totdf)
+  	    );
+  	return (EXIT_SUCCESS);
+  }
+  #include        <math.h>
+  #include        <stdio.h>
+  #include        "std.h"
+  double
+  LGamma(x)
+  double x;
+  {
+  	static const double cof[6] = {
+  		76.18009173,	-86.50532033, 24.01409822,
+  		-1.231739516, 0.120858003e-2, -0.536382e-5
+  	};
+  	double tmp, ser;
+  	int j;
+  	if (--x < 0.0) {        
+  		double pix = PI * x;
+  		return (log(pix / sin(pix)) - LGamma(1.0 - x));
+  	}
+  	tmp = x + 5.5;
+  	tmp -= (x + 0.5) * log(tmp);
+  	ser = 1.0;
+  	for (j = 0; j < 6; ++j) {
+  		ser += cof[j] / ++x;
+  	}
+  	return (-tmp + log(2.50662827465 * ser));
+2:30,110c
+  
+  
+  	while (fgets(line, MAXLINE, stdin) != NULL) {   
+  		for (p = line; *p != '\0' && isspace((int)*p); ++p) {
+  		}
+  
+  
+  
+  		if (*p == COMMENT) {    
+  
+  			continue;
+  		}
+  		if (sscanf(p, "%d %d\n", &r, &c) != 2) {
+  
+  
+  
+  
+  
+  
+  		}
+  		for (i = 0; i < r; ++i) {
+  			for (j = 0; j < c; ++j) {
+  				if (scanf(" %ld", &x(i, j)) != 1) {
+  
+  
+  
+  					return (EXIT_FAILURE);
+  				}
+  			}
+  		}
+  		info = InfoTbl(r, c, f, &infodf);
+  		if (info >= 0.0) {
+  			(void)printf("2info = %5.2f\tdf = %2d\tq = %7.4f\n",
+  
+  			    QChiSq(info, infodf)
+  			    );
+  
+  
+  
+  			(void)fputs(info < -3.5 ? "out of memory\n"
+  
+  
+  			    : "table all zeros\n",
+  			    stdout
+  			    );
+  		}
+  
+  
+  
+  
+  	}
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  double
+  LGamma(x)
+  double x;
+  {
+  
+  
+  
+  
+  
+  
+  	if (--x < 0.0) {        
+  		double pix = PI * x;
+  
+  	}
+  
+  
+  
+  
+  
+  
+  
+3:30,110c
+  	int totdf;              
+  	         ;
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	 
+  	;
+  
+  
+  	 
+  	                                                               ;;
+  
+  
+  	      
+  	                     ;
+  }
+  #include        <math.h>
+  #include        <stdio.h>
+  #include        "std.h"
+  double
+  LGamma(x)
+  double x;
+  {
+  	static const double cof[6] = {
+  		76.18009173,	-86.50532033, 24.01409822,
+  		-1.231739516, 0.120858003e-2, -0.536382e-5
+  	};
+  	double tmp, ser;
+  	int j;
+  	;
+  
+  
+  	 
+  	             ;
+  	tmp -= (x + 0.5) * log(tmp);
+  	         ;
+  	;
+  
+  	                                                                                                 
+  	return (-tmp + log(2.50662827465 * ser));
+====2
+1:114c
+3:114c
+  static double
+2:114c
+  
+====3
+1:120,129c
+2:120,129c
+  	if (x <= 0.0) {
+  		return (0.0);
+  	}
+  	del = sum = 1.0 / (ap = a);
+  	for (n = 1; n <= ITMAX; ++n) {
+  		sum += del *= x / ++ap;
+  		if (Abs(del) < Abs(sum) * EPS) {
+  			return (sum * exp(-x + a * log(x) - LGamma(a)));
+  		}
+  	}
+3:120,129c
+  	;
+  
+  	 
+  	                          ;
+  	;
+  
+  
+  
+  
+  	                                                                                                 
+====2
+1:133c
+3:133c
+  double a, x;
+2:133c
+  
+====
+1:138,155c
+  	for (n = 1; n <= ITMAX; ++n) {
+  		double anf;
+  		double an = (double)n;
+  		double ana = an - a;
+  		a0 = (a1 + a0 * ana) * fac;
+  		b0 = (b1 + b0 * ana) * fac;
+  		anf = an * fac;
+  		b1 = x * b0 + anf * b1;
+  		a1 = x * a0 + anf * a1;
+  		if (a1 != 0.0) {        
+  			double g = b1 * (fac = 1.0 / a1);
+  			gold = g - gold;
+  			if (Abs(gold) < EPS * Abs(g)) {
+  				return (exp(-x + a * log(x) - LGamma(a)) * g);
+  			}
+  			gold = g;
+  		}
+  	}
+2:138,155c
+  	for (n = 1; n <= ITMAX; ++n) {
+  
+  
+  
+  
+  
+  
+  
+  
+  		if (a1 != 0.0) {        
+  			double g = b1 * (fac = 1.0 / a1);
+  
+  
+  
+  
+  
+  		}
+  	}
+3:138,155c
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	                                                                                                 
+====3
+1:161c
+2:161c
+  	return (x < a + 1.0 ? 1.0 - gser(a, x) : gcf(a, x));
+3:161c
+  	                                                   ;
+====2
+1:166c
+3:166c
+  int df;
+2:166c
+  
+====3
+1:168c
+2:168c
+  	return (QGamma((double)df / 2.0, chisq / 2.0));
+3:168c
+  	                                              ;
+====2
+1:170,182c
+3:170,182c
+  #include        <math.h>               
+  #if __STDC__
+  #include        <stdlib.h>              
+  #include        "std.h"
+  #else
+  #include        "std.h"
+  extern pointer malloc();
+  extern void free();
+  #endif
+  #ifndef NULL
+  #define NULL    0
+  #endif
+  #define x(i, j)    f[(i)*c+(j)]         
+2:170,182c
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+====2
+1:185,186c
+3:185,186c
+  int r;                          
+  int c;                          
+2:185,186c
+  
+  
+====2
+1:190c
+3:190c
+  	int i;                  
+2:190c
+  
+====2
+1:192c
+3:192c
+  	double N;               
+2:192c
+  
+====
+1:196,201c
+  	int rdf = r - 1;        
+  	int cdf = c - 1;        
+  	if ((rdf <= 0) || (cdf <= 0)) {
+  		info = -3.0;
+  		goto ret3;
+  	}
+2:196,201c
+  	int rdf = r - 1;        
+  	int cdf = c - 1;        
+  
+  
+  
+  
+3:196,201c
+  	int rdf =      ;        
+  	int cdf =      ;        
+  	if ((rdf <= 0) || (cdf <= 0)) {
+  		info = -3.0;
+  		goto ret3;
+  	}
+====
+1:203,260c
+  	if ((xi = (double *)malloc(r * sizeof(double))) == NULL) {
+  		info = -4.0;
+  		goto ret3;
+  	}
+  	if ((xj = (double *)malloc(c * sizeof(double))) == NULL) {
+  		info = -4.0;
+  		goto ret2;
+  	}
+  	N = 0.0;
+  	for (i = 0; i < r; ++i) {
+  		double sum = 0.0;       
+  		for (j = 0; j < c; ++j) {
+  			long k = x(i, j);
+  			if (k < 0L) {
+  				info = -2.0;
+  				goto ret1;
+  			}
+  			sum += (double)k;
+  		}
+  		N += xi[i] = sum;
+  	}
+  	if (N <= 0.0) {
+  		info = -1.0;
+  		goto ret1;
+  	}
+  	for (j = 0; j < c; ++j) {
+  		double sum = 0.0;       
+  		for (i = 0; i < r; ++i) {
+  			sum += (double)x(i, j);
+  		}
+  		xj[j] = sum;
+  	}
+  	info = N * log(N);                                      
+  	for (i = 0; i < r; ++i) {
+  		double pi = xi[i];      
+  		if (pi > 0.0) {
+  			info -= pi * log(pi);                   
+  		}
+  		for (j = 0; j < c; ++j) {
+  			double pij = (double)x(i, j);
+  			if (pij > 0.0) {
+  				info += pij * log(pij);         
+  			}
+  		}
+  	}
+  	for (j = 0; j < c; ++j) {
+  		double pj = xj[j];      
+  		if (pj > 0.0) {
+  			info -= pj * log(pj);                   
+  		}
+  	}
+  	info *= 2.0;                    
+  ret1:
+  	free((pointer)xj);
+  ret2:
+  	free((pointer)xi);
+  ret3:
+  	return (info);
+2:203,260c
+  	if ((xi = (double *)malloc(r * sizeof(double))) == NULL) {
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  		double pj = xj[j];      
+  		if (pj > 0.0) {
+  			info -= pj * log(pj);                   
+  		}
+  	}
+  
+  
+  
+  
+  
+  
+  	return (info);
+3:203,260c
+  	;
+  
+  
+  	 
+  	;
+  
+  
+  	 
+  	       ;
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	                                                                                                                                                 
+  	;
+  
+  
+  	 
+  	;
+  
+  
+  
+  
+  
+  	                                                                                                                                                 
+  	                 ;                                      
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	                                                                                                                                                 
+  	;
+  
+  
+  
+  
+  	                                                                                                                                                 
+  	           ;                    
+  ret1:
+  	                 ;
+  ret2:
+  	                 ;
+  ret3:
+  	             ;

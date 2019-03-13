@@ -8,6 +8,10 @@ Multi-criteria slicing result for three small benchmark projects. The benchmark 
 - *word count*
 - *mug*
 
+#### Date: 19.3.13
+
+Update: Add directory `orbs_gt_multi`. The directory contains `diff` results of odd case: when the orbs slice size is bigger than the multi-criteria slice size.
+
 ## Summary
 
 ### Static Statistics
@@ -73,3 +77,7 @@ A directory which contains the comparing result between ORBS slice and multi-cri
 ### bayes_sim
 
 A directory which contains the incremental slice ordered by the bayesian inference model(*Section 5.4 on the report*).
+
+## orbs_gt_multi
+
+A directory which contains the `diff --side-by-side` and `diff3` result of orbs slice and multi-criteria slice for the case when orbs slice size is bigger than the multi-criteria slice size.

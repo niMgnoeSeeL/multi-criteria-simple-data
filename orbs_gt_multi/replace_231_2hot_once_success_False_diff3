@@ -1,0 +1,635 @@
+====2
+1:1c
+3:1c
+  extern void exit();
+2:1c
+  
+====2
+1:3c
+3:3c
+  void Caseerror();
+2:3c
+  
+====2
+1:7c
+3:7c
+  # define NULL		0
+2:7c
+  
+====2
+1:31c
+3:31c
+  int maxsize;
+2:31c
+  
+====3
+1:35c
+2:35c
+  	return (result != NULL);
+3:35c
+  	                       ;
+====2
+1:37c
+3:37c
+  int
+2:37c
+  
+====2
+1:42c
+3:42c
+  int maxset;
+2:42c
+  
+====3
+1:62,64c
+2:62,64c
+  	} else {if (s[*i + 1] == ENDSTR) {
+  		result = ESCAPE;
+  	} else{
+3:62,64c
+  	} else {if (s[*i + 1] == ENDSTR) ;
+  
+  	  else{
+====3
+1:68,70c
+2:68,70c
+  		} else {if (s[*i] == 't') {
+  			result = TAB;
+  		} else{
+3:68,70c
+  		} else {if (s[*i] == 't') ;
+  
+  		  else{
+====2
+1:77c
+3:77c
+  void
+2:77c
+  
+====2
+1:84c
+3:84c
+  int maxset;
+2:84c
+  
+====3
+1:90,93c
+2:90,93c
+  		if (src[*i - 1] == ESCAPE) {
+  			escjunk = esc(src, i);
+  			junk = addstr(escjunk, dest, j, maxset);
+  		} else {if (src[*i] != DASH)    {
+3:90,93c
+  		if (src[*i - 1] == ESCAPE) ;
+  
+  
+  		  else {if (src[*i] != DASH)    {
+====3
+1:95,97c
+2:95,97c
+  		} else {if ((*j <= 1) || (src[*i + 1] == ENDSTR)) {
+  			junk = addstr(DASH, dest, j, maxset);
+  		} else {if ((isalnum(src[*i - 1])) && (isalnum(src[*i + 1])) &&
+3:95,97c
+  		} else {if ((*j <= 1) || (src[*i + 1] == ENDSTR)) ;
+  
+  		  else {if ((isalnum(src[*i - 1])) && (isalnum(src[*i + 1])) &&
+====3
+1:102,105c
+2:102,105c
+  			*i = *i + 1;
+  		}else      {
+  			junk = addstr(DASH, dest, j, maxset);
+  		}}}}
+3:102,105c
+  			           ;
+  		}else      ;
+  
+  		 }}}
+====3
+1:118,122c
+2:118,122c
+  	*i = *i + 1;
+  	if (arg[*i] == NEGATE) {
+  		junk = addstr(NCCL, pat, j, MAXPAT);
+  		*i = *i + 1;
+  	} else{
+3:118,122c
+  	           ;
+  	if (arg[*i] == NEGATE) ;
+  
+  
+  	  else{
+====3
+1:126c
+2:126c
+  	junk = addstr(0, pat, j, MAXPAT);
+3:126c
+  	                                ;
+====3
+1:129c
+2:129c
+  	return (arg[*i] == CCLEND);
+3:129c
+  	                          ;
+====2
+1:135c
+3:135c
+  int lastj;
+2:135c
+  
+====3
+1:155,156c
+2:155,156c
+  	return (c == LITCHAR || c == BOL || c == EOL || c == ANY ||
+  	       c == CCL || c == NCCL || c == CLOSURE);
+3:155,156c
+  	;
+  	                                              
+====2
+1:158c
+3:158c
+  int
+2:158c
+  
+====2
+1:161c
+3:161c
+  int start;
+2:161c
+  
+====3
+1:171,172c
+2:171,172c
+  	i = start;
+  	lastj = 0;
+3:171,172c
+  	         ;
+  	         ;
+====3
+1:175c
+2:175c
+  		lj = j;
+3:175c
+  		      ;
+====3
+1:178,180c
+2:178,180c
+  		} else {if ((arg[i] == BOL) && (i == start)) {
+  			junk = addstr(BOL, pat, &j, MAXPAT);
+  		} else {if ((arg[i] == EOL) && (arg[i+1] == delim)) {
+3:178,180c
+  		} else {if ((arg[i] == BOL) && (i == start)) ;
+  
+  		  else {if ((arg[i] == EOL) && (arg[i+1] == delim)) {
+====3
+1:184c
+2:184c
+  			done = (bool)(getres == false);
+3:184c
+  			                              ;
+====3
+1:186,189c
+2:186,189c
+  			lj = lastj;
+  			if (in_set_2(pat[lj])) {
+  				done = true;
+  			} else{
+3:186,189c
+  			          ;
+  			if (in_set_2(pat[lj])) ;
+  
+  			  else{
+====3
+1:197c
+2:197c
+  		lastj = lj;
+3:197c
+  		          ;
+====3
+1:203,207c
+2:203,207c
+  	if ((done) || (arg[i] != delim)) {
+  		result = 0;
+  	} else {if ((!junk)) {
+  		result = 0;
+  	} else{
+3:203,207c
+  	if ((done) || (arg[i] != delim)) ;
+  
+  	  else {if ((!junk)) ;
+  
+  	  else{
+====2
+1:212c
+3:212c
+  int
+2:212c
+  
+====2
+1:221c
+3:221c
+  int
+2:221c
+  
+====2
+1:224c
+3:224c
+  int from;
+2:224c
+  
+====3
+1:232c
+2:232c
+  	j = 0;
+3:232c
+  	     ;
+====3
+1:235,238c
+2:235,238c
+  		if ((arg[i] == (unsigned)('&'))) {
+  			junk = addstr(DITTO, sub, &j, MAXPAT);
+  		} else{
+  			escjunk = esc(arg, &i);
+3:235,238c
+  		if ((arg[i] == (unsigned)('&'))) ;
+  
+  		  else{
+  			                      ;
+====3
+1:243,249c
+2:243,249c
+  	if (arg[i] != delim) {
+  		result = 0;
+  	} else{
+  		junk = addstr(ENDSTR, &(*sub), &j, MAXPAT);
+  		if ((!junk)) {
+  			result = 0;
+  		} else{
+3:243,249c
+  	if (arg[i] != delim) ;
+  
+  	  else{
+  		                                          ;
+  		if ((!junk)) ;
+  
+  		  else{
+====2
+1:264c
+3:264c
+  void subline();
+2:264c
+  
+====2
+1:269c
+3:269c
+  int offset;
+2:269c
+  
+====
+1:273,274c
+  	flag = false;
+  	i = offset + pat[offset];
+2:273,274c
+  
+  	i = offset + pat[offset];
+3:273,274c
+  	            ;
+  	                        ;
+====2
+1:285c
+3:285c
+  bool
+2:285c
+  
+====2
+1:290c
+3:290c
+  int j;
+2:290c
+  
+====
+1:295,301c
+  	if ((lin[*i] == ENDSTR)) {
+  		result = false;
+  	} else{
+  		if (!in_pat_set(pat[j])) {
+  			(void)fprintf(stdout, "in omatch: can't happen\n");
+  			abort();
+  		} else{
+2:295,301c
+  	if ((lin[*i] == ENDSTR)) {
+  
+  	} else{
+  		if (!in_pat_set(pat[j])) {
+  
+  
+  		} else{
+3:295,301c
+  	if ((lin[*i] == ENDSTR)) ;
+  
+  	  else{
+  		if (!in_pat_set(pat[j])) ;
+  
+  
+  		  else{
+====
+1:307,312c
+  				break;
+  			case BOL:
+  				if (*i == 0) {
+  					advance = 0;
+  				}
+  				break;
+2:307,312c
+  				break;
+  
+  
+  
+  
+  
+3:307,312c
+  				     ;
+  			case BOL:
+  				;
+  
+  				 
+  				     ;
+====3
+1:317c
+2:317c
+  				break;
+3:317c
+  				     ;
+====
+1:322c
+  				break;
+2:322c
+  
+3:322c
+  				     ;
+====
+1:327,334c
+  				break;
+  			case NCCL:
+  				if ((lin[*i] != NEWLINE) && (!locate(lin[*i], pat, j+1))) {
+  					advance = 1;
+  				}
+  				break;
+  			default:
+  				Caseerror(pat[j]);
+2:327,334c
+  
+  
+  				if ((lin[*i] != NEWLINE) && (!locate(lin[*i], pat, j+1))) {
+  
+  				}
+  
+  
+  
+3:327,334c
+  				     ;
+  			case NCCL:
+  				;
+  
+  				 
+  				     ;
+  			default:
+  				                 ;
+====2
+1:348c
+3:348c
+  int n;
+2:348c
+  
+====
+1:351,354c
+  	if (!in_pat_set(pat[n])) {
+  		(void)fprintf(stdout, "in patsize: can't happen\n");
+  		abort();
+  	} else{
+2:351,354c
+  	if (!in_pat_set(pat[n])) {
+  
+  
+  	} else{
+3:351,354c
+  	if (!in_pat_set(pat[n])) ;
+  
+  
+  	  else{
+====
+1:370,372c
+  			break;
+  		default:
+  			Caseerror(pat[n]);
+2:370,372c
+  
+  
+  
+3:370,372c
+  			     ;
+  		default:
+  			                 ;
+====2
+1:377c
+3:377c
+  int
+2:377c
+  
+====2
+1:380c
+3:380c
+  int offset;
+2:380c
+  
+====2
+1:382c
+3:382c
+  int j;
+2:382c
+  
+====
+1:407c
+  			done = true;
+2:407c
+  
+3:407c
+  			           ;
+====2
+1:420c
+3:420c
+  void
+2:420c
+  
+====2
+1:422,423c
+3:422,423c
+  char *lin;
+  int s1, s2;
+2:422,423c
+  
+  
+====
+1:427,438c
+  	int j;
+  	i = 0;
+  	while ((sub[i] != ENDSTR)) {
+  		if ((sub[i] == DITTO)) {
+  			for (j = s1; j < s2; j++) {
+  				fputc(lin[j], stdout);
+  			}
+  		} else{
+  			fputc(sub[i], stdout);
+  		}
+  		i = i + 1;
+  	}
+2:427,438c
+  
+  
+  	while ((sub[i] != ENDSTR)) {
+  		if ((sub[i] == DITTO)) {
+  
+  
+  
+  
+  
+  		}
+  
+  	}
+3:427,438c
+  	int j;
+  	     ;
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  	                                                 
+====2
+1:440c
+3:440c
+  void
+2:440c
+  
+====2
+1:444c
+3:444c
+  char *sub;
+2:444c
+  
+====
+1:447c
+  	lastm = -1;
+2:447c
+  
+3:447c
+  	          ;
+====
+1:451,454c
+  		if ((m >= 0) && (lastm != m)) {
+  			putsub(lin, i, m, sub);
+  			lastm = m;
+  		}
+2:451,454c
+  
+  
+  
+  
+3:451,454c
+  		;
+  
+  
+  		 
+====
+1:456c
+  			fputc(lin[i], stdout);
+2:456c
+  
+3:456c
+  			                     ;
+====2
+1:463c
+3:463c
+  void
+2:463c
+  
+====2
+1:476c
+3:476c
+  int argc;
+2:476c
+  
+====
+1:481,484c
+  	if (argc < 2) {
+  		(void)fprintf(stdout, "usage: change from [to]\n");
+  		exit(1);
+  	}
+2:481,484c
+  	if (argc < 2) {
+  
+  		exit(1);
+  	}
+3:481,484c
+  	;
+  
+  
+  	 
+====
+1:487c
+  		(void)fprintf(stdout, "change: illegal \"from\" pattern\n");
+2:487c
+  
+3:487c
+  		                                                           ;
+====
+1:493c
+  			(void)fprintf(stdout, "change: illegal \"to\" string\n");
+2:493c
+  
+3:493c
+  			                                                        ;
+====
+1:496,497c
+  	} else{
+  		sub[0] = '\0';
+2:496,497c
+  
+  
+3:496,497c
+  	} else{
+  		             ;
+====
+1:500c
+  	return (0);
+2:500c
+  
+3:500c
+  	          ;
+====2
+1:502c
+3:502c
+  void
+2:502c
+  
+====2
+1:504c
+3:504c
+  int n;
+2:504c
+  
+====
+1:506,507c
+  	(void)fprintf(stdout, "Missing case limb: line %d\n", n);
+  	exit(4);
+2:506,507c
+  
+  
+3:506,507c
+  	                                                                                                        ;
+  	       ;
