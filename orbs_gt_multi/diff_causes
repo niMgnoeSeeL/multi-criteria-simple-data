@@ -1,0 +1,973 @@
+replace
+====
+1:66,77c
+  		if (s[*i] == 'n') {
+  			result = NEWLINE;
+  		} else {if (s[*i] == 't') {
+  			result = TAB;
+  		} else{
+  			result = s[*i];
+  		}}
+  	}}
+  	return (result);
+  }
+  void change();
+  void
+2:66,77c
+  		if (s[*i] == 'n') {
+  			result = NEWLINE;
+  		} else {if (s[*i] == 't') {
+  			result = TAB;
+  		} else{
+  			result = s[*i];
+  		}}
+  	}}
+  	return (result);
+  }
+  
+  
+3:66,77c
+  		;
+  
+  
+  
+  
+  
+  		  
+  	}}
+  	               ;
+  }
+  void change();
+  void
+===
+1:230,253c
+  	bool junk;
+  	character escjunk;
+  	j = 0;
+  	i = from;
+  	while ((arg[i] != delim) && (arg[i] != ENDSTR)) {
+  		if ((arg[i] == (unsigned)('&'))) {
+  			junk = addstr(DITTO, sub, &j, MAXPAT);
+  		} else{
+  			escjunk = esc(arg, &i);
+  			junk = addstr(escjunk, sub, &j, MAXPAT);
+  		}
+  		i = i + 1;
+  	}
+  	if (arg[i] != delim) {
+  		result = 0;
+  	} else{
+  		junk = addstr(ENDSTR, &(*sub), &j, MAXPAT);
+  		if ((!junk)) {
+  			result = 0;
+  		} else{
+  			result = i;
+  		}
+  	}
+  	return (result);
+2:230,253c
+  
+  
+  
+  
+  	while ((arg[i] != delim) && (arg[i] != ENDSTR)) {
+  		if ((arg[i] == (unsigned)('&'))) {
+  
+  
+  
+  
+  		}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	}
+  
+3:230,253c
+  	bool junk;
+  	character escjunk;
+  	     ;
+  	        ;
+  	;
+  
+  
+  
+  
+  
+  
+  
+  	                                                                                                         
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  	 
+  	               ;
+====
+1:272,283c
+  	bool flag;
+  	flag = false;
+  	i = offset + pat[offset];
+  	while ((i > offset)) {
+  		if (c == pat[i]) {
+  			flag = true;
+  			i = offset;
+  		} else{
+  			i = i - 1;
+  		}
+  	}
+  	return (flag);
+2:272,283c
+  
+  
+  
+  	while ((i > offset)) {
+  
+  
+  
+  
+  
+  
+  	}
+  
+3:272,283c
+  	bool flag;
+  	            ;
+  	                        ;
+  	;
+  
+  
+  
+  
+  
+  
+  	                                                                                                           
+  	             ;
+====
+1:292,344c
+  	char advance;
+  	bool result;
+  	advance = -1;
+  	if ((lin[*i] == ENDSTR)) {
+  		result = false;
+  	} else{
+  		if (!in_pat_set(pat[j])) {
+  			(void)fprintf(stdout, "in omatch: can't happen\n");
+  			abort();
+  		} else{
+  			switch (pat[j]) {
+  			case LITCHAR:
+  				if (lin[*i] == pat[j + 1]) {
+  					advance = 1;
+  				}
+  				break;
+  			case BOL:
+  				if (*i == 0) {
+  					advance = 0;
+  				}
+  				break;
+  			case ANY:
+  				if (lin[*i] != NEWLINE) {
+  					advance = 1;
+  				}
+  				break;
+  			case EOL:
+  				if (lin[*i] == NEWLINE) {
+  					advance = 0;
+  				}
+  				break;
+  			case CCL:
+  				if (locate(lin[*i], pat, j + 1)) {
+  					advance = 1;
+  				}
+  				break;
+  			case NCCL:
+  				if ((lin[*i] != NEWLINE) && (!locate(lin[*i], pat, j+1))) {
+  					advance = 1;
+  				}
+  				break;
+  			default:
+  				Caseerror(pat[j]);
+  			}
+  		}
+  	}
+  	if ((advance >= 0)) {
+  		*i = *i + advance;
+  		result = true;
+  	} else{
+  		result = false;
+  	}
+  	return (result);
+2:292,344c
+  
+  
+  
+  	if ((lin[*i] == ENDSTR)) {
+  
+  
+  		if (!in_pat_set(pat[j])) {
+  
+  
+  
+  			switch (pat[j]) {
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  			}
+  		}
+  
+  
+  
+  
+  
+  
+  	}
+  
+3:292,344c
+  	char advance;
+  	bool result;
+  	            ;
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	 
+  	;
+  
+  
+  
+  
+  	 
+  	               ;
+====
+1:90,93c
+  		if (src[*i - 1] == ESCAPE) {
+  			escjunk = esc(src, i);
+  			junk = addstr(escjunk, dest, j, maxset);
+  		} else {if (src[*i] != DASH)    {
+2:90,93c
+  		if (src[*i - 1] == ESCAPE) {
+  
+  			junk = addstr(escjunk, dest, j, maxset);
+  		} else {if (src[*i] != DASH)    {
+3:90,93c
+  		if (src[*i - 1] == ESCAPE) ;
+  
+  
+  		  else {if (src[*i] != DASH)    {
+====3
+1:95,97c
+2:95,97c
+  		} else {if ((*j <= 1) || (src[*i + 1] == ENDSTR)) {
+  			junk = addstr(DASH, dest, j, maxset);
+  		} else {if ((isalnum(src[*i - 1])) && (isalnum(src[*i + 1])) &&
+3:95,97c
+  		} else {if ((*j <= 1) || (src[*i + 1] == ENDSTR)) ;
+  
+  		  else {if ((isalnum(src[*i - 1])) && (isalnum(src[*i + 1])) &&
+====3
+1:103,105c
+2:103,105c
+  		}else      {
+  			junk = addstr(DASH, dest, j, maxset);
+  		}}}}
+3:103,105c
+  		}else      ;
+  
+  		 }}}
+====3
+1:140,143c
+2:140,143c
+  	for (jp = *j - 1; jp >= lastj; jp--) {
+  		jt = jp + CLOSIZE;
+  		junk = addstr(pat[jp], pat, &jt, MAXPAT);
+  	}
+3:140,143c
+  	;
+  
+  
+  	                                                                                                                                                             
+
+
+
+tcas <- all false
+====
+1:78,81c
+      {	
+  	result = Own_Above_Threat() && (Cur_Vertical_Sep >= MINSEP) && (Up_Separation >= ALIM());
+      }
+      return result;
+2:78,81c
+      {	
+  	result = Own_Above_Threat() && (Cur_Vertical_Sep >= MINSEP) && (Up_Separation >= ALIM());
+      }
+  
+3:78,81c
+      ;
+  
+       
+                   ;
+====
+1:95,99c
+      else
+      {
+  	result = !(Own_Above_Threat()) || ((Own_Above_Threat()) && (Up_Separation >= ALIM()));
+      }
+      return result;
+2:99c
+  
+3:95,99c
+      else
+      ;
+  
+       
+                   ;
+====
+1:104c
+      return (Own_Tracked_Alt < Other_Tracked_Alt);
+2:104c
+  
+3:104c
+                                                  ;
+====
+1:128,141c
+  	if (need_upward_RA && need_downward_RA)
+          /* unreachable: requires Own_Below_Threat and Own_Above_Threat
+             to both be true - that requires Own_Tracked_Alt < Other_Tracked_Alt
+             and Other_Tracked_Alt < Own_Tracked_Alt, which isn't possible */
+  	    {alt_sep = UNRESOLVED;}
+  	else {if (need_upward_RA)
+  	    {alt_sep = UPWARD_RA;}
+  	else {if (need_downward_RA)
+  	    {alt_sep = DOWNWARD_RA;}
+  	else
+  	    {alt_sep = UNRESOLVED;}}}
+      }
+      
+      return alt_sep;
+2:128,141c
+  	if (need_upward_RA && need_downward_RA)
+  
+  
+  
+  	    {alt_sep = UNRESOLVED;}
+  	else {if (need_upward_RA)
+  	    {alt_sep = UPWARD_RA;}
+  	else {if (need_downward_RA)
+  
+  
+  	    {alt_sep = UNRESOLVED;}}}
+      }
+  
+  
+3:128,141c
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	                                                                                        
+      }
+      
+                    ;
+====
+1:148,157c
+      if(argc < 13)
+      {
+  	fprintf(stdout, "Error: Command line arguments are\n");
+  	fprintf(stdout, "Cur_Vertical_Sep, High_Confidence, Two_of_Three_Reports_Valid\n");
+  	fprintf(stdout, "Own_Tracked_Alt, Own_Tracked_Alt_Rate, Other_Tracked_Alt\n");
+  	fprintf(stdout, "Alt_Layer_Value, Up_Separation, Down_Separation\n");
+  	fprintf(stdout, "Other_RAC, Other_Capability, Climb_Inhibit\n");
+  	exit(1);
+      }
+      initialize();
+2:148,157c
+      if(argc < 13)
+      {
+  
+  
+  
+  
+  
+  	exit(1);
+      }
+      initialize();
+3:148,157c
+      ;
+  
+  
+  
+  
+  
+  
+  
+       
+                  ;
+
+
+
+totinfo
+====2
+1:21,22c
+3:21,22c
+  int argc;
+  char *argv[];
+2:21,22c
+  
+  
+====
+1:30,110c
+  	int totdf;              
+  	totdf = 0;
+  	while (fgets(line, MAXLINE, stdin) != NULL) {   
+  		for (p = line; *p != '\0' && isspace((int)*p); ++p) {
+  		}
+  		if (*p == '\0') {
+  			continue;       
+  		}
+  		if (*p == COMMENT) {    
+  			(void)fputs(line, stdout);
+  			continue;
+  		}
+  		if (sscanf(p, "%d %d\n", &r, &c) != 2) {
+  			(void)fputs("* invalid row/column line *\n", stdout);
+  			return (EXIT_FAILURE);
+  		}
+  		if (r * c > MAXTBL) {
+  			(void)fputs("* table too large *\n", stdout);
+  			return (EXIT_FAILURE);
+  		}
+  		for (i = 0; i < r; ++i) {
+  			for (j = 0; j < c; ++j) {
+  				if (scanf(" %ld", &x(i, j)) != 1) {
+  					(void)fputs("* EOF in table *\n",
+  					    stdout
+  					    );
+  					return (EXIT_FAILURE);
+  				}
+  			}
+  		}
+  		info = InfoTbl(r, c, f, &infodf);
+  		if (info >= 0.0) {
+  			(void)printf("2info = %5.2f\tdf = %2d\tq = %7.4f\n",
+  			    info, infodf,
+  			    QChiSq(info, infodf)
+  			    );
+  			totinfo += info;
+  			totdf += infodf;
+  		}else          {
+  			(void)fputs(info < -3.5 ? "out of memory\n"
+  			    : info < -2.5 ? "table too small\n"
+  			    : info < -1.5 ? "negative freq\n"
+  			    : "table all zeros\n",
+  			    stdout
+  			    );
+  		}
+  	}
+  	if (totdf <= 0) {
+  		(void)fputs("\n*** no information accumulated ***\n", stdout);
+  		return (EXIT_FAILURE);
+  	}
+  	(void)printf("\ntotal 2info = %5.2f\tdf = %2d\tq = %7.4f\n",
+  	    totinfo, totdf,
+  	    QChiSq(totinfo, totdf)
+  	    );
+  	return (EXIT_SUCCESS);
+  }
+  #include        <math.h>
+  #include        <stdio.h>
+  #include        "std.h"
+  double
+  LGamma(x)
+  double x;
+  {
+  	static const double cof[6] = {
+  		76.18009173,	-86.50532033, 24.01409822,
+  		-1.231739516, 0.120858003e-2, -0.536382e-5
+  	};
+  	double tmp, ser;
+  	int j;
+  	if (--x < 0.0) {        
+  		double pix = PI * x;
+  		return (log(pix / sin(pix)) - LGamma(1.0 - x));
+  	}
+  	tmp = x + 5.5;
+  	tmp -= (x + 0.5) * log(tmp);
+  	ser = 1.0;
+  	for (j = 0; j < 6; ++j) {
+  		ser += cof[j] / ++x;
+  	}
+  	return (-tmp + log(2.50662827465 * ser));
+2:30,110c
+  
+  
+  	while (fgets(line, MAXLINE, stdin) != NULL) {   
+  		for (p = line; *p != '\0' && isspace((int)*p); ++p) {
+  		}
+  
+  
+  
+  		if (*p == COMMENT) {    
+  
+  			continue;
+  		}
+  		if (sscanf(p, "%d %d\n", &r, &c) != 2) {
+  
+  
+  
+  
+  
+  
+  		}
+  		for (i = 0; i < r; ++i) {
+  			for (j = 0; j < c; ++j) {
+  				if (scanf(" %ld", &x(i, j)) != 1) {
+  
+  
+  
+  					return (EXIT_FAILURE);
+  				}
+  			}
+  		}
+  		info = InfoTbl(r, c, f, &infodf);
+  		if (info >= 0.0) {
+  			(void)printf("2info = %5.2f\tdf = %2d\tq = %7.4f\n",
+  
+  			    QChiSq(info, infodf)
+  			    );
+  
+  
+  
+  			(void)fputs(info < -3.5 ? "out of memory\n"
+  
+  
+  			    : "table all zeros\n",
+  			    stdout
+  			    );
+  		}
+  
+  
+  
+  
+  	}
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  double
+  LGamma(x)
+  double x;
+  {
+  
+  
+  
+  
+  
+  
+  	if (--x < 0.0) {        
+  		double pix = PI * x;
+  
+  	}
+  
+  
+  
+  
+  
+  
+  
+3:30,110c
+  	int totdf;              
+  	         ;
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	 
+  	;
+  
+  
+  	 
+  	                                                               ;;
+  
+  
+  	      
+  	                     ;
+  }
+  #include        <math.h>
+  #include        <stdio.h>
+  #include        "std.h"
+  double
+  LGamma(x)
+  double x;
+  {
+  	static const double cof[6] = {
+  		76.18009173,	-86.50532033, 24.01409822,
+  		-1.231739516, 0.120858003e-2, -0.536382e-5
+  	};
+  	double tmp, ser;
+  	int j;
+  	;
+  
+  
+  	 
+  	             ;
+  	                           ;
+  	         ;
+  	;
+  
+  	                                                                                                 
+  	                                        ;
+===
+====3
+1:120,129c
+2:120,129c
+  	if (x <= 0.0) {
+  		return (0.0);
+  	}
+  	del = sum = 1.0 / (ap = a);
+  	for (n = 1; n <= ITMAX; ++n) {
+  		sum += del *= x / ++ap;
+  		if (Abs(del) < Abs(sum) * EPS) {
+  			return (sum * exp(-x + a * log(x) - LGamma(a)));
+  		}
+  	}
+3:120,129c
+  	;
+  
+  	 
+  	                          ;
+  	;
+  
+  
+  
+  
+  	                                                                                                 
+====
+1:196,260c
+  	int rdf = r - 1;        
+  	int cdf = c - 1;        
+  	if ((rdf <= 0) || (cdf <= 0)) {
+  		info = -3.0;
+  		goto ret3;
+  	}
+  	*pdf = rdf * cdf;               
+  	if ((xi = (double *)malloc(r * sizeof(double))) == NULL) {
+  		info = -4.0;
+  		goto ret3;
+  	}
+  	if ((xj = (double *)malloc(c * sizeof(double))) == NULL) {
+  		info = -4.0;
+  		goto ret2;
+  	}
+  	N = 0.0;
+  	for (i = 0; i < r; ++i) {
+  		double sum = 0.0;       
+  		for (j = 0; j < c; ++j) {
+  			long k = x(i, j);
+  			if (k < 0L) {
+  				info = -2.0;
+  				goto ret1;
+  			}
+  			sum += (double)k;
+  		}
+  		N += xi[i] = sum;
+  	}
+  	if (N <= 0.0) {
+  		info = -1.0;
+  		goto ret1;
+  	}
+  	for (j = 0; j < c; ++j) {
+  		double sum = 0.0;       
+  		for (i = 0; i < r; ++i) {
+  			sum += (double)x(i, j);
+  		}
+  		xj[j] = sum;
+  	}
+  	info = N * log(N);                                      
+  	for (i = 0; i < r; ++i) {
+  		double pi = xi[i];      
+  		if (pi > 0.0) {
+  			info -= pi * log(pi);                   
+  		}
+  		for (j = 0; j < c; ++j) {
+  			double pij = (double)x(i, j);
+  			if (pij > 0.0) {
+  				info += pij * log(pij);         
+  			}
+  		}
+  	}
+  	for (j = 0; j < c; ++j) {
+  		double pj = xj[j];      
+  		if (pj > 0.0) {
+  			info -= pj * log(pj);                   
+  		}
+  	}
+  	info *= 2.0;                    
+  ret1:
+  	free((pointer)xj);
+  ret2:
+  	free((pointer)xi);
+  ret3:
+  	return (info);
+2:196,260c
+  	int rdf = r - 1;        
+  	int cdf = c - 1;        
+  
+  
+  
+  
+  	*pdf = rdf * cdf;               
+  	if ((xi = (double *)malloc(r * sizeof(double))) == NULL) {
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  		double pj = xj[j];      
+  		if (pj > 0.0) {
+  			info -= pj * log(pj);                   
+  		}
+  	}
+  
+  
+  
+  
+  
+  
+  	return (info);
+3:196,260c
+  	int rdf =      ;        
+  	int cdf =      ;        
+  	;
+  
+  
+  	 
+  	                ;               
+  	;
+  
+  
+  	 
+  	;
+  
+  
+  	 
+  	       ;
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	                                                                                                                                                 
+  	;
+  
+  
+  	 
+  	;
+  
+  
+  
+  
+  
+  	                                                                                                                                                 
+  	                 ;                                      
+  	;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	                                                                                                                                                 
+  	;
+  
+  
+  
+  
+  	                                                                                                                                                 
+  	           ;                    
+  ret1:
+  	                 ;
+  ret2:
+  	                 ;
+  ret3:
+  	             ;
